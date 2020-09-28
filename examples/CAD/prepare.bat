@@ -2,19 +2,23 @@ REM
 REM 
 REM 
 
-for /f "delims=" %%i in ("%0") do set TESTDIR=%%~dpi
+for /f %%i in ("%0") do set TESTDIR=%%~dpi
 
-set MAIN=cad
-set TMPDIR=%TESTDIR%tmp
-REM set TMPDIR=C:\User\develop\cxproc-build\trunk\x86-windows-debug-dynamic\www\html\pkg2-cad
+set MAIN=CAD
+
 set CXP_LOG=2
-set CXP_PATH=%TESTDIR%..//
-REM set LANG=en
+set CXP_PATH=%TESTDIR%../..//
+REM set LANG=
+set LANG=en
+REM set TMPDIR=%TESTDIR%tmp_%LANG%
+set TMPDIR=%TESTDIR%tmp
 
-set PATH="C:\User\Programme\graphviz\bin";"C:\User\develop\cxproc-build\trunk\x86-windows-debug-dynamic\bin";%PATH%
+set PATH="C:\UserData\Programme\graphviz\bin";"C:\UserData\Develop\cxproc-build\x86-windows-debug\bin";%PATH%
 
 md %TMPDIR%
 
 cxproc.exe PkgProcessMain.cxp %MAIN%.pie 2> %TMPDIR%\main.log
 
 REM pause
+REM robocopy %TMPDIR% %TESTDIR%..\..\www\html\Documents *.*
+
