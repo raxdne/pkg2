@@ -1,0 +1,14 @@
+;2D/3D-Rekonstruktion
+
+* Beschreibung
+
+Die 2D/3D-Rekonstruktion stellt einen möglichen Schritt von der 2D- in die
+3D-Welt dar. Mit mathematischen Methoden werden aus 2D-Informationen räumliche
+Informationen abgeleitet. Übliche Anwendungen stellen Berechnungen aus einer
+Reihe von Photographien oder die 3D-Modellrekonstruktion aus Technischen
+Zeichnungen dar.
+
+Strenggenommen erfolgt eine vergleichbare Umsetzung auch bei den Verfahren zur
+räumlichen Digitalisierung (z.B. Auswertung mehrerer CCD-Kameraaufnahmen oder
+Berechnung von Voxel-Informationen aus den Schichtbildern der
+Computertomographie).

@@ -1,0 +1,5 @@
+
+Ein Nullserien-Modell muß als Material-Modell in kleiner Stückzahl im späteren
+Serienverfahren hergestellt worden sein. Damit kann, als Bestandteil der
+Produkterprobung, die Eignung des gewählten Fertigungsweges überprüft werden.
+

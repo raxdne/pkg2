@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pie:pie xmlns:pie="http://www.tenbusch.info/pie" xmlns:pkg="http://www.tenbusch.info/pkg" lang="de" class="petrinet">
+  <author href="raxdne@web.de">A. Tenbusch</author>
+  <copyright>(C) 1999-2020 A. Tenbusch</copyright>
+  <section id="pkg" version="1.1">
+    <h>CAD-Prozesse<translation lang="en">CAD processes</translation></h>
+    <section id="virtualitaet">
+      <h>Virtualität<translation lang="en">Virtual World</translation></h>
+      <pkg:stelle id="ZweiD-CAD-Modell">
+        <h>2D-CAD-Modell<translation lang="en">2D CAD Model</translation></h>
+        <abstract>rechnerinternes Modell, Zeichnung in einem 2D-CAD-System<translation lang="en">rechnerinternes Modell, Zeichnung in einem 2D-CAD-System</translation></abstract>
+        <p>Datei im DWG-, DXF- oder einem proprietären Format<translation lang="en">Datei im DWG-, DXF- oder einem proprietären Format</translation></p>
+        <import name="man/ZweiD-CAD-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Berechnungs-Modell">
+        <h>Berechnungs-Modell<translation lang="en">Calculation Model</translation></h>
+        <abstract>rechnerinternes Modell mit Berechnungsergebnissen zu bestimmten Eigenschaften<translation lang="en">rechnerinternes Modell mit Berechnungsergebnissen zu bestimmten Eigenschaften</translation></abstract>
+        <import name="man/Berechnungs-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Facetten-Modell">
+        <h>Facetten-Modell<translation lang="en">Facet Model</translation></h>
+        <abstract>rechnerinternes Modell, Polygon- oder Facetten-Repräsentation eines Volumens<translation lang="en">rechnerinternes Modell, Polygon- oder Facetten-Repräsentation eines Volumens</translation></abstract>
+        <p>Datei im STL- oder VRML-Format<translation lang="en">Datei im STL- oder VRML-Format</translation></p>
+        <import name="man/Facetten-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Netz-Modell">
+        <h>Netz-Modell<translation lang="en">Mesh Model</translation></h>
+        <abstract>rechnerinternes Modell, vernetzte Geometrie<translation lang="en">rechnerinternes Modell, vernetzte Geometrie</translation></abstract>
+        <p>Datei im ...-Format<translation lang="en">Datei im ...-Format</translation></p>
+        <import name="man/Netz-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Flaechen-Modell">
+        <h>Flächen-Modell<translation lang="en">Surface Model</translation></h>
+        <abstract>rechnerinternes Modell, überwiegend aus Flächendaten<translation lang="en">rechnerinternes Modell, überwiegend aus Flächendaten</translation></abstract>
+        <p>Datei im IGES-, VDA-FS- oder STEP-Format<translation lang="en">Datei im IGES-, VDA-FS- oder STEP-Format</translation></p>
+        <import name="man/Flaechen-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Kurven-Modell">
+        <h>Kurven-Modell<translation lang="en">Curve Model</translation></h>
+        <abstract>rechnerinternes Modell, überwiegend aus Kurvendaten (Splines, Drahtgitter)<translation lang="en">rechnerinternes Modell, überwiegend aus Kurvendaten (Splines, Drahtgitter)</translation></abstract>
+        <p>Datei im IGES-Format<translation lang="en">Datei im IGES-Format</translation></p>
+        <import name="man/Kurven-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Punkte-Modell">
+        <h>Punkte-Modell<translation lang="en">Point Model</translation></h>
+        <abstract>rechnerinternes Modell aus Daten einzelner Oberflächenpunkte<translation lang="en">rechnerinternes Modell aus Daten einzelner Oberflächenpunkte</translation></abstract>
+        <p>Datei im ASCII- oder IGES-Format<translation lang="en">Datei im ASCII- oder IGES-Format</translation></p>
+        <import name="man/Punkte-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Punkte-Wolke">
+        <h>Punkte-Wolke<translation lang="en">Point Cloud</translation></h>
+        <abstract>rechnerinternes Modell, Daten oberflächenbeschreibender, dichtliegender Punkte<translation lang="en">rechnerinternes Modell, Daten oberflächenbeschreibender, dichtliegender Punkte</translation></abstract>
+        <p>Datei im ASCII- oder IGES-Format<translation lang="en">Datei im ASCII- oder IGES-Format</translation></p>
+        <import name="man/Punkte-Wolke.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="CNC-Programm">
+        <h>CNC-Programm<translation lang="en">CNC Program</translation></h>
+        <abstract>rechnerinternes Modell, Bahnen für die CNC-Bearbeitung<translation lang="en">rechnerinternes Modell, Bahnen für die CNC-Bearbeitung</translation></abstract>
+        <p>Datei im NC-Format (DIN 66025), CL-Data (DIN 66215)<translation lang="en">Datei im NC-Format (DIN 66025), CL-Data (DIN 66215)</translation></p>
+        <import name="man/CNC-Programm.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="DreiD-CAD-Modell-ET">
+        <h>CAD-Modell Erzeugnisteil<translation lang="en">CAD Model Design</translation></h>
+        <abstract>rechnerinternes Modell, vollständige 3D-Volumenbeschreibung (B-Rep, CSG)<translation lang="en">rechnerinternes Modell, vollständige 3D-Volumenbeschreibung (B-Rep, CSG)</translation></abstract>
+        <p>Datei in einem proprietären (Pro/E, I-DEAS usw.) oder neutralen (STEP) Format<translation lang="en">Datei in einem proprietären (Pro/E, I-DEAS usw.) oder neutralen (STEP) Format</translation></p>
+        <import name="man/DreiD-CAD-Modell-ET.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="DreiD-CAD-Modell-EZ">
+        <h>CAD-Modell Einbaumodell<translation lang="en">CAD Modell simplified</translation></h>
+        <abstract>rechnerinternes Modell, vollständige 3D-Volumenbeschreibung (B-Rep, CSG)<translation lang="en">rechnerinternes Modell, vollständige 3D-Volumenbeschreibung (B-Rep, CSG)</translation></abstract>
+        <p>Datei in einem proprietären (Pro/E, I-DEAS usw.) oder neutralen (STEP) Format<translation lang="en">Datei in einem proprietären (Pro/E, I-DEAS usw.) oder neutralen (STEP) Format</translation></p>
+        <import name="man/DreiD-CAD-Modell-EZ.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="JT-Modell">
+        <h>JT-Modell<translation lang="en">JT Model</translation></h>
+        <abstract>rechnerinternes Modell, vollständige 3D-Volumenbeschreibung (B-Rep, CSG)<translation lang="en">rechnerinternes Modell, vollständige 3D-Volumenbeschreibung (B-Rep, CSG)</translation></abstract>
+        <p>Datei in einem proprietären (Pro/E, I-DEAS usw.) oder neutralen (STEP) Format<translation lang="en">Datei in einem proprietären (Pro/E, I-DEAS usw.) oder neutralen (STEP) Format</translation></p>
+        <import name="man/JT-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Differenz-Modell">
+        <h>Differenz-Modell<translation lang="en">Delta Model</translation></h>
+        <abstract>Geometr. Differenz-Modell<translation lang="en">Geometr. Differenz Model</translation></abstract>
+        <import name="man/Differenz-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Wanddicken-Modell">
+        <h>Wanddicken-Modell<translation lang="en">Wallthickness Model</translation></h>
+        <abstract>Geometr. Wanddicken-Modell<translation lang="en">Geometr. Wanddicken Model</translation></abstract>
+        <import name="man/Wanddicken-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Fuellstands-Modell">
+        <h>Fuellstands-Modell<translation lang="en">Fill Model</translation></h>
+        <abstract>Geometr. Fuellstands-Modell<translation lang="en">Geometr. Fuellstands Model</translation></abstract>
+        <import name="man/Fuellstands-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Kollisions-Modell">
+        <h>Kollisions-Modell<translation lang="en">Collision Model</translation></h>
+        <abstract>Geometr. Kollisions-Modell<translation lang="en">Geometr. Kollisions Model</translation></abstract>
+        <import name="man/Kollisions-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Voxel-Modell">
+        <h>Voxel-Modell<translation lang="en">Voxel Model</translation></h>
+        <abstract>rechnerinternes Modell, Daten kleiner Volumenelemente (Voxel)<translation lang="en">rechnerinternes Modell, Daten kleiner Volumenelemente (Voxel)</translation></abstract>
+        <p>Serie von Schnittbildern<translation lang="en">Serie von Schnittbildern</translation></p>
+        <import name="man/Voxel-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Proportions-Modell">
+        <h>Proportions-Modell<translation lang="en">Proportional Model</translation></h>
+        <abstract>physisches, maßstabsgetreues Modell<translation lang="en">physisches, maßstabsgetreues Modell</translation></abstract>
+        <import name="man/Proportions-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:transition id="DreiD-CAD">
+        <h>3D-CAD-Modellierung<translation lang="en">3D-CAD-Modellierung</translation></h>
+        <abstract>Modellierung in einem 3D-CAD-System<translation lang="en">Modellierung in einem 3D-CAD-System</translation></abstract>
+        <p>I-DEAS, ProE, CATIA<translation lang="en">I-DEAS, ProE, CATIA</translation></p>
+        <import name="man/DreiD-CAD.txt"/>
+      </pkg:transition>
+      <pkg:transition id="DreiD-Viewer">
+        <h>3D-Darstellung (Viewer)<translation lang="en">3D-Darstellung (Viewer)</translation></h>
+        <abstract>Darstellung in einem 3D-System<translation lang="en">Darstellung in einem 3D-System</translation></abstract>
+        <p>VisView (Standard, Professional)<translation lang="en">VisView (Standard, Professional)</translation></p>
+        <import name="man/DreiD-Viewer.txt"/>
+      </pkg:transition>
+      <pkg:transition id="ZweiD-CAD">
+        <h>2D-CAD-Modellierung<translation lang="en">2D-CAD-Modellierung</translation></h>
+        <abstract>Modellierung in einem 2D-CAD-System<translation lang="en">Modellierung in einem 2D-CAD-System</translation></abstract>
+        <p>AutoCAD<translation lang="en">AutoCAD</translation></p>
+        <import name="man/ZweiD-CAD.txt"/>
+      </pkg:transition>
+      <pkg:transition id="ZweiD-DreiD-Rekonstruktion">
+        <h>2D/3D-Rekonstruktion<translation lang="en">2D/3D-Rekonstruktion</translation></h>
+        <abstract>rechnergestützter Aufbau eines Drahtgittermodells aus mehreren 2D-Perspektiven<translation lang="en">rechnergestützter Aufbau eines Drahtgittermodells aus mehreren 2D-Perspektiven</translation></abstract>
+        <p>s [erb96a]<translation lang="en">s [erb96a]</translation></p>
+        <import name="man/ZweiD-DreiD-Rekonstruktion.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Flaechenrueckfuehrung">
+        <h>Flächenrückführung<translation lang="en">Flächenrückführung</translation></h>
+        <abstract>Modellierung von 3D-CAD-Elementen überwiegend aus Punkt- und Kurvendaten<translation lang="en">Modellierung von 3D-CAD-Elementen überwiegend aus Punkt- und Kurvendaten</translation></abstract>
+        <p>Surfacer, Euclid Quantum, CATIA, ICEM-Surf<translation lang="en">Surfacer, Euclid Quantum, CATIA, ICEM-Surf</translation></p>
+        <import name="man/Flaechenrueckfuehrung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Polygonisierung">
+        <h>Polygonisierung<translation lang="en">Polygonisierung</translation></h>
+        <abstract>Erarbeitung eines Facetten-Modells<translation lang="en">Erarbeitung eines Facetten-Modells</translation></abstract>
+        <p>Surfacer, <translation lang="en">Surfacer, </translation></p>
+        <import name="man/Polygonisierung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Punkte-Digitalisierung">
+        <h>Punktweise Digitalisierung<translation lang="en">Punktweise Digitalisierung</translation></h>
+        <abstract>Digitalisierung (Vermessen) einzelner Oberflächen-Punkte eines physischen Modells<translation lang="en">Digitalisierung (Vermessen) einzelner Oberflächen-Punkte eines physischen Modells</translation></abstract>
+        <p>Meßschieber, Koordinatenmeßmaschine<translation lang="en">Meßschieber, Koordinatenmeßmaschine</translation></p>
+        <import name="man/Punkte-Digitalisierung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Volumen-Digitalisierung">
+        <h>Volumen-Digitalisierung<translation lang="en">Volumen-Digitalisierung</translation></h>
+        <abstract>Digitalisierung der Volumen-Informationen eines physischen Modells<translation lang="en">Digitalisierung der Volumen-Informationen eines physischen Modells</translation></abstract>
+        <p>CT, MRI<translation lang="en">CT, MRI</translation></p>
+        <import name="man/Volumen-Digitalisierung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Flaechen-Digitalisierung">
+        <h>Flächenhafte Digitalisierung<translation lang="en">Flächenhafte Digitalisierung</translation></h>
+        <abstract>Digitalisierung der Oberflächen-Informationen eines physischen Modells<translation lang="en">Digitalisierung der Oberflächen-Informationen eines physischen Modells</translation></abstract>
+        <p>OptoShape usw.<translation lang="en">OptoShape usw.</translation></p>
+        <import name="man/Flaechen-Digitalisierung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Vernetzung">
+        <h>Vernetzung<translation lang="en">Vernetzung</translation></h>
+        <abstract>Generierung von Netzen<translation lang="en">Generierung von Netzen</translation></abstract>
+        <p>Netzgeneratoren, FEM-Präprozessoren<translation lang="en">Netzgeneratoren, FEM-Präprozessoren</translation></p>
+        <import name="man/Vernetzung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Berechnung">
+        <h>Berechnung<translation lang="en">Berechnung</translation></h>
+        <abstract>Berechnung/Simulation von bestimmten Eigenschaften (Verformung, Thermik, Dynamik usw.)<translation lang="en">Berechnung/Simulation von bestimmten Eigenschaften (Verformung, Thermik, Dynamik usw.)</translation></abstract>
+        <p>FEM-, BEM-, CFD-System<translation lang="en">FEM-, BEM-, CFD-System</translation></p>
+        <import name="man/Berechnung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Virtuelle-Realitaet">
+        <h>Virtuelle-Realität<translation lang="en">Virtuelle-Realität</translation></h>
+        <abstract>Darstellung einer Virtuellen Realität<translation lang="en">Darstellung einer Virtuellen Realität</translation></abstract>
+        <p>Cave<translation lang="en">Cave</translation></p>
+        <import name="man/Virtuelle-Realitaet.txt"/>
+      </pkg:transition>
+      <pkg:transition id="JT-Konvertierung">
+        <h>JT-Konvertierung<translation lang="en">JT-Konvertierung</translation></h>
+        <abstract>Umwandlung eines CAD-Modells in ein JT-Modell<translation lang="en">Umwandlung eines CAD-Modells in ein JT Model</translation></abstract>
+        <p>JT-Konverter<translation lang="en">JT-Konverter</translation></p>
+        <import name="man/JT-Konvertierung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="CNC-Programmierung">
+        <h>CNC-Programmierung<translation lang="en">CNC-Programmierung</translation></h>
+        <abstract>Erstellung des CNC-Programms<translation lang="en">Erstellung des CNC-Programms</translation></abstract>
+        <p>EXAPT-Prozessor<translation lang="en">EXAPT-Prozessor</translation></p>
+        <import name="man/CNC-Programmierung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="CNC">
+        <h>CNC-Bearbeitung<translation lang="en">CNC-Bearbeitung</translation></h>
+        <abstract>Fertigung der Geometrie auf einer CNC-Maschine<translation lang="en">Fertigung der Geometrie auf einer CNC-Maschine</translation></abstract>
+        <p>CNC-Fräse, HSC-Maschine<translation lang="en">CNC-Fräse, HSC-Maschine</translation></p>
+        <import name="man/CNC.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Wanddickenanalyse">
+        <h>Wanddickenanalyse<translation lang="en">Wanddickenanalyse</translation></h>
+        <abstract>Analyse der Wanddicke<translation lang="en">Analyse der Wanddicke</translation></abstract>
+        <p>3D-Caliper<translation lang="en">3D-Caliper</translation></p>
+        <import name="man/Wanddickenanalyse.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Geometrievergleich">
+        <h>Geometrievergleich<translation lang="en">Geometrievergleich</translation></h>
+        <abstract>Geometrischer Vergleich von Modellen<translation lang="en">Geometrischer Vergleich von Modellen</translation></abstract>
+        <p>3D-Caliper<translation lang="en">3D-Caliper</translation></p>
+        <import name="man/Geometrievergleich.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Fuellstandsanalyse">
+        <h>Fuellstandsanalyse<translation lang="en">Fuellstandsanalyse</translation></h>
+        <abstract>Analyse der Wanddicke<translation lang="en">Analyse der Wanddicke</translation></abstract>
+        <p>3D-Caliper<translation lang="en">3D-Caliper</translation></p>
+        <import name="man/Fuellstandsanalyse.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Fuellstandsversuch">
+        <h>Fuellstandsversuch<translation lang="en">Fuellstandsversuch</translation></h>
+        <abstract>Analyse der Wanddicke<translation lang="en">Analyse der Wanddicke</translation></abstract>
+        <p>3D-Caliper<translation lang="en">3D-Caliper</translation></p>
+        <import name="man/Fuellstandsversuch.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Kollisionsanalyse">
+        <h>Kollisionsanalyse<translation lang="en">Kollisionsanalyse</translation></h>
+        <abstract>Analyse der Wanddicke<translation lang="en">Analyse der Wanddicke</translation></abstract>
+        <p>3D-Caliper<translation lang="en">3D-Caliper</translation></p>
+        <import name="man/Kollisionsanalyse.txt"/>
+      </pkg:transition>
+      <pkg:relation from="Berechnungs-Modell" to="Modellbildung"/>
+      <pkg:relation from="ZweiD-CAD-Modell" to="Modellbildung"/>
+      <pkg:relation from="Punkte-Wolke" to="Modellbildung"/>
+      <pkg:relation from="Kurven-Modell" to="Modellbildung"/>
+      <pkg:relation from="Flaechen-Modell" to="Modellbildung"/>
+      <pkg:relation from="Facetten-Modell" to="Modellbildung"/>
+      <pkg:relation from="Voxel-Modell" to="Modellbildung"/>
+      <pkg:relation from="Proportions-Modell" to="Modellbildung"/>
+      <pkg:relation from="Modellbildung" to="Mentales-Modell"/>
+      <pkg:relation from="Facetten-Modell" to="RP"/>
+      <pkg:relation from="RP" to="Proportions-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="DreiD-CAD"/>
+      <pkg:relation from="Kurven-Modell" to="DreiD-CAD"/>
+      <pkg:relation from="Punkte-Modell" to="DreiD-CAD"/>
+      <pkg:relation from="DreiD-CAD-Modell-EZ" to="DreiD-CAD"/>
+      <pkg:relation from="DreiD-CAD-Modell-ET" to="DreiD-CAD"/>
+      <pkg:relation from="ZweiD-CAD-Modell" to="DreiD-CAD"/>
+      <pkg:relation from="Mentales-Modell" to="DreiD-CAD"/>
+      <pkg:relation from="DreiD-CAD" to="Voxel-Modell"/>
+      <pkg:relation from="DreiD-CAD" to="Netz-Modell"/>
+      <pkg:relation from="DreiD-CAD" to="CNC-Programm"/>
+      <pkg:relation from="DreiD-CAD" to="Zeichnung"/>
+      <pkg:relation from="DreiD-CAD" to="Kurven-Modell"/>
+      <pkg:relation from="DreiD-CAD" to="Flaechen-Modell"/>
+      <pkg:relation from="DreiD-CAD" to="DreiD-CAD-Modell-EZ"/>
+      <pkg:relation from="DreiD-CAD" to="DreiD-CAD-Modell-ET"/>
+      <pkg:relation from="DreiD-CAD" to="JT-Modell"/>
+      <pkg:relation from="DreiD-CAD" to="Facetten-Modell"/>
+      <pkg:relation from="DreiD-CAD" to="Facetten-Modell"/>
+      <pkg:relation from="DreiD-CAD" to="Mentales-Modell"/>
+      <pkg:relation from="JT-Modell" to="DreiD-Viewer"/>
+      <pkg:relation from="Facetten-Modell" to="DreiD-Viewer"/>
+      <pkg:relation from="DreiD-Viewer" to="JT-Modell"/>
+      <pkg:relation from="DreiD-Viewer" to="Mentales-Modell"/>
+      <pkg:relation from="Mentales-Modell" to="ZweiD-CAD"/>
+      <pkg:relation from="ZweiD-CAD" to="Zeichnung"/>
+      <pkg:relation from="ZweiD-CAD" to="ZweiD-CAD-Modell"/>
+      <pkg:relation from="ZweiD-CAD-Modell" to="ZweiD-DreiD-Rekonstruktion"/>
+      <pkg:relation from="Zeichnung" to="ZweiD-DreiD-Rekonstruktion"/>
+      <pkg:relation from="ZweiD-DreiD-Rekonstruktion" to="Kurven-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="Flaechenrueckfuehrung"/>
+      <pkg:relation from="Kurven-Modell" to="Flaechenrueckfuehrung"/>
+      <pkg:relation from="Punkte-Wolke" to="Flaechenrueckfuehrung"/>
+      <pkg:relation from="Flaechenrueckfuehrung" to="Flaechen-Modell"/>
+      <pkg:relation from="Flaechenrueckfuehrung" to="Kurven-Modell"/>
+      <pkg:relation from="Flaechenrueckfuehrung" to="Punkte-Wolke"/>
+      <pkg:relation from="Flaechenrueckfuehrung" to="Punkte-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="Polygonisierung"/>
+      <pkg:relation from="Voxel-Modell" to="Polygonisierung"/>
+      <pkg:relation from="Punkte-Wolke" to="Polygonisierung"/>
+      <pkg:relation from="Polygonisierung" to="Facetten-Modell"/>
+      <pkg:relation from="Proportions-Modell" to="Punkte-Digitalisierung"/>
+      <pkg:relation from="Punkte-Digitalisierung" to="Punkte-Modell"/>
+      <pkg:relation from="Proportions-Modell" to="Volumen-Digitalisierung"/>
+      <pkg:relation from="Volumen-Digitalisierung" to="Voxel-Modell"/>
+      <pkg:relation from="Proportions-Modell" to="Flaechen-Digitalisierung"/>
+      <pkg:relation from="Flaechen-Digitalisierung" to="Punkte-Wolke"/>
+      <pkg:relation from="Voxel-Modell" to="Vernetzung"/>
+      <pkg:relation from="Facetten-Modell" to="Vernetzung"/>
+      <pkg:relation from="Flaechen-Modell" to="Vernetzung"/>
+      <pkg:relation from="Vernetzung" to="Netz-Modell"/>
+      <pkg:relation from="Netz-Modell" to="Berechnung"/>
+      <pkg:relation from="Berechnung" to="Berechnungs-Modell"/>
+      <pkg:relation from="Facetten-Modell" to="Virtuelle-Realitaet"/>
+      <pkg:relation from="Virtuelle-Realitaet" to="Mentales-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="JT-Konvertierung"/>
+      <pkg:relation from="DreiD-CAD-Modell-EZ" to="JT-Konvertierung"/>
+      <pkg:relation from="DreiD-CAD-Modell-ET" to="JT-Konvertierung"/>
+      <pkg:relation from="JT-Konvertierung" to="JT-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="CNC-Programmierung"/>
+      <pkg:relation from="Punkte-Wolke" to="CNC-Programmierung"/>
+      <pkg:relation from="Facetten-Modell" to="CNC-Programmierung"/>
+      <pkg:relation from="CNC-Programmierung" to="CNC-Programm"/>
+      <pkg:relation from="CNC-Programm" to="CNC"/>
+      <pkg:relation from="CNC" to="Proportions-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="Wanddickenanalyse"/>
+      <pkg:relation from="DreiD-CAD-Modell-EZ" to="Wanddickenanalyse"/>
+      <pkg:relation from="DreiD-CAD-Modell-ET" to="Wanddickenanalyse"/>
+      <pkg:relation from="Wanddickenanalyse" to="Wanddicken-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="Geometrievergleich"/>
+      <pkg:relation from="DreiD-CAD-Modell-EZ" to="Geometrievergleich"/>
+      <pkg:relation from="DreiD-CAD-Modell-ET" to="Geometrievergleich"/>
+      <pkg:relation from="Geometrievergleich" to="Differenz-Modell"/>
+      <pkg:relation from="Facetten-Modell" to="Fuellstandsanalyse"/>
+      <pkg:relation from="Voxel-Modell" to="Fuellstandsanalyse"/>
+      <pkg:relation from="Fuellstandsanalyse" to="Fuellstands-Modell"/>
+      <pkg:relation from="Proportions-Modell" to="Fuellstandsversuch"/>
+      <pkg:relation from="Fuellstandsversuch" to="Fuellstands-Modell"/>
+      <pkg:relation from="Flaechen-Modell" to="Kollisionsanalyse"/>
+      <pkg:relation from="DreiD-CAD-Modell-EZ" to="Kollisionsanalyse"/>
+      <pkg:relation from="DreiD-CAD-Modell-ET" to="Kollisionsanalyse"/>
+      <pkg:relation from="JT-Modell" to="Kollisionsanalyse"/>
+      <pkg:relation from="Facetten-Modell" to="Kollisionsanalyse"/>
+      <pkg:relation from="Voxel-Modell" to="Kollisionsanalyse"/>
+      <pkg:relation from="Kollisionsanalyse" to="Kollisions-Modell"/>
+    </section>
+    <section id="realitaet">
+      <h>Realität<translation lang="en">Real World</translation></h>
+      <pkg:stelle id="Mentales-Modell">
+        <h>Mentales Modell<translation lang="en">Mental Model</translation></h>
+        <abstract>gedankliche Vorstellung von der Geometrie<translation lang="en">gedankliche Vorstellung von der Geometrie</translation></abstract>
+        <p>Idee<translation lang="en">Idee</translation></p>
+        <import name="man/Mentales-Modell.txt"/>
+      </pkg:stelle>
+      <pkg:stelle id="Zeichnung">
+        <h>Zeichnung<translation lang="en">Drawing</translation></h>
+        <abstract>manuell angefertigte oder geplottete Zeichnung oder Skizze von der Geometrie<translation lang="en">manuell angefertigte oder geplottete Zeichnung oder Skizze von der Geometrie</translation></abstract>
+        <p>Technische Zeichnung, Skizze<translation lang="en">Technische Zeichnung, Skizze</translation></p>
+        <import name="man/Zeichnung.txt"/>
+      </pkg:stelle>
+      <pkg:transition id="Zeichnen">
+        <h>Zeichnen<translation lang="en">Zeichnen</translation></h>
+        <abstract>Manuelles Erstellen von Skizzen oder Zeichnungen<translation lang="en">Manuelles Erstellen von Skizzen oder Zeichnungen</translation></abstract>
+        <p>Zeichenbrett usw.<translation lang="en">Zeichenbrett usw.</translation></p>
+        <import name="man/Zeichnen.txt"/>
+      </pkg:transition>
+      <pkg:transition id="Modellbildung">
+        <h>Modellbildung<translation lang="en">Modellbildung</translation></h>
+        <abstract>Erarbeiten eines Mentalen Modells<translation lang="en">Erarbeiten eines Mentalen Modells</translation></abstract>
+        <import name="man/Modellbildung.txt"/>
+      </pkg:transition>
+      <pkg:transition id="RP">
+        <h>RP-Prozeß<translation lang="en">RP-Prozeß</translation></h>
+        <abstract>schichtweise aufbauende Fertigung von Prototypen nach rechnerinternen Modellen<translation lang="en">schichtweise aufbauende Fertigung von Prototypen nach rechnerinternen Modellen</translation></abstract>
+        <p>RP-System: SLA, LOM, SLS, ModelMaker, Z<translation lang="en">RP-System: SLA, LOM, SLS, ModelMaker, Z</translation></p>
+        <import name="man/RP.txt"/>
+      </pkg:transition>
+      <pkg:relation from="Mentales-Modell" to="Zeichnen"/>
+      <pkg:relation from="Zeichnen" to="Zeichnung"/>
+      <pkg:relation from="Zeichnung" to="Modellbildung"/>
+    </section>
+  </section>
+</pie:pie>

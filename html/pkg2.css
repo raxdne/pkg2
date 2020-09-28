@@ -1,0 +1,245 @@
+
+/* this is the CSS for txt2x: txt2x.css
+
+  replace patterns:               draft
+    background-color:#ffffff;
+    basis font-size:12px;
+    link color:#001dc1;
+    li margin-top:30px;
+
+ */
+
+body,table {
+  background-color:#ffffff;
+  font-family:Arial,sans-serif;
+  /* font-family:Courier; */
+  font-size:12px;
+}
+
+/* Header tags
+
+ */
+
+h1,h2,h3 {
+  /* 
+ margin: 10px 10px 20px 20px;
+     margin-top
+     margin-bottom
+     margin-left
+     margin-right
+  */
+ font-weight:bold;
+}
+
+h1 {
+  font-size:140%;
+}
+
+h2 {
+  font-size:120%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+h4 {
+  font-size:90%;
+}
+
+/* Links
+
+ */
+a {
+  text-decoration:none;
+}
+
+a:active {
+  color:#ff0000;
+}
+
+a:link {
+  /* color:#AA5522; */
+}
+
+a:visited {
+  /* color:#772200; */
+}
+
+a.datum {
+  background-color:#00FF00;
+}
+.done {
+ color:#aaaaaa;
+ text-decoration:line-through;
+}
+.geb {
+ color:#000000;
+ background-color:#00FF00;
+}
+.abgehakt {
+ color:#aaaaaa;
+ text-decoration:line-through;
+}
+
+/* 
+
+ */
+b.em {
+  font-size:140%;
+  font-weight:normal;
+  text-decoration:underline;
+}
+
+/* settings for tables
+ */
+
+table {
+  background-color:#666666;
+  border-collapse:separate;
+  border-spacing:1px;
+  empty-cells:show;
+  /*  table-layout:fixed; */
+ margin: 5px 5px 5px 5px;
+  /* 
+     margin-top
+     margin-bottom
+     margin-left
+     margin-right
+  */
+}
+.hidden {
+  background-color:#ffffff;
+  border-collapse:separate;
+  border-spacing:1px;
+  empty-cells:show;
+  /*  table-layout:fixed; */
+ margin: 5px 5px 5px 5px;
+  /* 
+     margin-top
+     margin-bottom
+     margin-left
+     margin-right
+  */
+}
+
+/* data cells */
+td {
+  /*  border:1px solid #222222;*/
+  background-color:#ffffff;
+/*   vertical-align:top; */
+  padding: 4px 4px 4px 4px;
+}
+.empty {
+  background-color:#ffffff;
+}
+.stelle {
+  text-align:center;
+}
+.transition {
+  text-align:center;
+  background-color:#e0e0e0;
+}
+
+/* header cells */
+th {
+  text-align:left;
+  background-color:#d9d9d9;
+  color:#000000;
+  font-weight:bold;
+  padding: 4px 4px 4px 4px;
+}
+.title {
+  text-align:left;
+  background-color:#e0e0e0;
+  font-weight:bold;
+}
+.header {
+  text-align:left;
+  background-color:#e0e0e0;
+  font-weight:bold;
+}
+ 
+/* lists */
+ul {
+  list-style-type:square;
+}
+
+li {
+  /* 
+ margin: 5px 5px 20px 20px;
+     margin-top
+     margin-bottom
+     margin-left
+     margin-right
+  */
+  /* text-indent:0.1cm; */
+}
+
+/* misc tags
+
+*/
+p {
+  /* 
+ margin: 5px 5px 20px 20px;
+     margin-top
+     margin-bottom
+     margin-left
+     margin-right
+  */
+  /* text-indent:0.1cm; */
+}
+
+img {
+ border:none
+}
+
+/* 
+p,ul,ol,li,div,td,th,address,blockquote,i,b,input {
+}
+ */
+
+
+div#ui {
+ padding:0;
+ margin: 0;
+}
+
+div#content {
+ border: 1px solid #4367c5;
+ border-style: solid none solid none;
+ padding: 0.5em 1em 0.5em 1em;
+ margin: 0;
+ background: #ffffff;
+}
+
+ul.ui-tabs {
+ padding: 0 1em 1em 1em;
+ margin: 0.2em;
+ left:2em;
+}
+
+li.ui-tab {
+  /* background: #c7d3fc; */
+ border: 1px solid #2f6fab;
+ border-style: none;
+ padding: 0.4em 0.3em 0.4em 0.3em;
+ list-style: none;
+ display: inline;
+ margin-left: 0.8em;
+  white-space: nowrap;
+ position: relative;
+/*  top:-1px */
+    }
+
+a.ui {
+  font-weight:bold;
+  font-size:160%;
+ color:#4367c5;
+}
+
+a.ui:visited {
+  font-weight:bold;
+  font-size:160%;
+ color:#4367c5;
+}

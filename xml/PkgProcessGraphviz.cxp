@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc" thread="yes">
+  <cxp:subst string="%TMPDIR%" env="TMPDIR" default="tmp"/>
+  <!-- single dot files -->
+  <cxp:each name="%N%">
+    <cxp:from>
+      <cxp:plain>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="PlainListIds.xsl"/>
+      </cxp:plain>
+    </cxp:from>
+    <cxp:make>
+      <cxp:plain name="%TMPDIR%/%N%.dot">
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="DotGraph.xsl">
+          <cxp:variable name="id_element" select="'%N%'"/>
+          <cxp:variable name="color_default" select="'grey'"/>
+          <cxp:variable name="flag_color" select="true()"/>
+          <cxp:variable name="flag_style" select="true()"/>
+          <cxp:variable name="flag_edge" select="true()"/>
+          <cxp:variable name="flag_subnet" select="true()"/>
+        </cxp:xsl>
+      </cxp:plain>
+      <cxp:system exec="dot -T cmapx -o %TMPDIR%/graph_%N%.xml %TMPDIR%/%N%.dot"/>
+      <cxp:system exec="dot -T png -o %TMPDIR%/graph_%N%.png %TMPDIR%/%N%.dot"/>
+      <!--
+      <cxp:system exec="dot -T ps2 -o %TMPDIR%/graph_%N%.eps %TMPDIR%/%N%.dot"/>
+-->
+    </cxp:make>
+  </cxp:each>
+</cxp:make>

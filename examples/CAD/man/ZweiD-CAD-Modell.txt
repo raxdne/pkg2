@@ -1,0 +1,5 @@
+
+Ein 2D-CAD-Modell stellt lediglich eine elektronische Zeichnung dar (speicher-,
+reproduzier- und änderbar).
+
+Abb. ZweiD-CAD-Modell.gif

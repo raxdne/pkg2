@@ -1,0 +1,28 @@
+/* DATEI: pkg.css */
+
+body { background-color:#a8d9f7; font-family:Arial,sans-serif; }
+
+h1 { font-size:24px; margin-bottom:18px; }
+
+h2 { font-size:21px; margin-bottom:18px; }
+
+h3 { font-size:16px; }
+
+h4 { font-size:13px; }
+
+p,ul,ol,li,div,td,th,address,blockquote,i,b,input { font-size:13px; }
+
+li { margin-top:3px; }
+
+blockquote,cite { font-style:italic; }
+
+a:link { color:#AA5522; text-decoration:none; }
+
+a:visited { color:#772200; text-decoration:none; }
+
+a:active { color:#000000; text-decoration:none; }
+
+a.an { text-decoration:none; }
+
+input { background-color:#cedde5; color:#AA5522; font-family:Arial,sans-serif;}
+

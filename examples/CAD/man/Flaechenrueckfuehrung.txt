@@ -1,0 +1,106 @@
+
+Abb. spoiler-x.jpg Flächenrückführung für ein Warmformwerkzeug
+
+Flächenrückführung kann als Sammelbegriff für die Gewinnung von Informationen
+und Daten hauptsächlich aus Punktwolken gesehen werden. Die wichtigsten
+Funktionen sind im folgenden beschrieben.
+
+* Qualitätskontrolle
+
+Für die Ermittelung der Abweichungen zwischen einer vorgegebnen Geometrie
+(CAD-Modell) und einem danach gefertigten Gegenstand (Bauteil) können diese in
+einem «Differenz-Plot« zwischen den CAD-Flächen und einer digitalisierten
+Punktewolke (s. z.B. Flächenhafte Digitalisierung) dargestellt werden. Dabei
+repräsentiert jeder Farbwert auf der Fläche einen bestimmten Abstand der
+gemessenen Punkte und der gegebenen Fläche.
+
+* Bestimmung von einzelnen Maßen
+
+Für die CAD-Modellierung eines vorgegebenen Gegenstandes können aus einer
+digitalisierten Punktewolke Maße für die Modellierung bestimmt werden, wenn der
+Gegenstand nicht mehr zur Verfügung steht oder die Maße nur mit einem hohen
+meßtechnischen Aufwand ermittelt werden können.
+
+* Extraktion einzelner Punkte und Punktbereiche
+
+Bei einfachen Formen genügt es die signifikanten Punkte herauszufiltern. Dieses
+«minimierte« Punktemodell kann als «gedachtes Drahtgittermodell« für die
+weitere Modellierung in ein CAD-System überführt werden.
+
+* Generierung von Geometrieelementen
+
+Dies stellt sicher die bekannteste und wichtigste Anwendung der
+Flächenrückführung dar. Diese Geometrieelemente müssen nicht zwangsläufig
+Flächen sein. Möglich sind auch Punkte, Kurven (2D und 3D), Ebenen.
+
+Rotationssymmetrische Bereiche können einfach durch Hüllkurven beschrieben
+werden. In einem CAD-System kann durch die Rotation dieser Kurven um eine Achse
+ein Volumenmodell erzeugt werden.
+
+Für bestimmte Aufgaben sind reine Flächenmodelle völlig ausreichend. Zum
+Beispiel lassen sich direkt aus diesen Daten CNC-Programme generieren.
+
+Ein Volumen vollständig mit Flächen zu beschreiben, ist sehr aufwendig, so daß
+i.d.R. nur die komplizierteren Bereiche über die Digitalisierung erfaßt werden.
+Je nach Aufgabenstellung entsteht dann ein kurven- und flächenbasiertes
+Geometriemodell.
+
+Weil entsprechende Programme auf die Berechnung von Kurven und Flächen aus
+Punktdaten spezialisiert sind entsteht eine rein geometrische Repräsentation.
+Weitere Zusammenhänge wie z.B. die Parametrik einzelner Elemente können nicht
+modelliert werden. Dies ermöglicht zwar ein sehr flexibles Vorgehen zusätzliche
+Änderungen am Modell sind mit diesen Programmen aber aufwendig.
+
+* Unterschiede zur CAD-Modellierung
+
+Die FR stellt die Brücke zwischen der 3D-Digitalisierung und der
+CAD-Modellierung her. Die meisten CAD-Systeme können nicht mit großen
+Punktewolken umgehen (Datenmenge, fehlende Funktionen). Zur weiteren
+Bearbeitung werden die Modelle über Standard-Schnittstellen in CAD-Systeme wie
+I-DEAS oder ProEngineer überführt. Dies macht erforderlich, daß das
+anschließend verwendete CAD-System über entsprechende B-Rep-Funktionen zum
+Erstellen eines Volumens verfügt (B-Rep- oder Hybrid-Modellierer).
+
+Im CAD-System bleiben die Geometrieelemente meist unveränderbar, so daß die
+Vorteile des CAD-Systems (CSG-Operationen, Parametrik) oft nur mit
+Einschränkungen genutzt werden können. Änderungen an diesen Modellen sind oft
+mit einer erneuten Digitalisierung verbunden.
+
+Eine andere Strategie benutzt die importierten Geometrieelemente nur als
+Hilfskonstuktionen für das Aufspannen von Kurven oder Flächen. Das eigentliche
+Modell wird dabei vollständig im CAD-System aufgebaut.
+
+Eine Trennung zwischen der eigentlichen CAD-Modellierung und der
+Flächenrückführung ist nur wegen fehlender Funktionen, bzw. anderer Ansätze in
+üblichen CAD-Systemen erforderlich. Die Grundfunktionen der
+Geometriemodellierung sind ähnlich und die Trennung bedingt außerdem das
+Problem der Schnittstellen.
+
+Um diesen Nachteil zu überwinden, werden CAD-Systeme mit Modulen zur
+Flächenrückführung ausgerüstet (I-DEAS mit Surfacer). Damit wird es möglich,
+die Flächenrückführung im CAD-System selbst als speziellen Modus durchzuführen.
+
+* Unterschiede zur Polygonisierung
+
+Im Gegensatz zur Polygonisierung werden bei der Flächenrückführung nicht
+einzelne Segmente sondern großflächige, stetige Bereiche überspannt. Die
+unstetigen Bereiche (Kanten) begrenzen die Flächen.
+
+* Literatur
+
+ 1. Wannemacher, B.; Hull, S.: Ist die Genauigkeit genau richtig? In: CAD-CAM
+    Report (1999), Nr. 11, S. 90 - 97
+
+ 2. Guo, B.: Surface reconstruction: from points to splines. In: Computer-Aided
+    Design 29 (1997), April, Nr. 4, S. 269
+
+ 3. Friedhoff, J.: Aufbereitung von 3D-Digitalisierdaten für den Werkzeug-,
+    Formen- und Modellbau, Universität Dortmund, Dissertation, 1996. - auch
+
+ 4. Weinert, K.; Friedhoff, J.: Intelligente Verfahren zur Berechnung von
+    Flächeninformationen aus 3D-Digitalisierdaten für die Flächenrekonstruktion
+    und HSC-Bearbeitung. In: Proceedings of International Conference on Rapid
+    Product Development. Stuttgart, Juni 1996, S. 143-152
+
+ 5. Surfacer (Imageware/SDRC)
+

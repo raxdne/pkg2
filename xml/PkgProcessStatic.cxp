@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<!-- net specific instructions -->
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc">
+  <cxp:subst string="%TMPDIR%" env="TMPDIR" default="tmp"/>
+  <cxp:subst string="%INPUT%" argv="2" default="%TMPDIR%/main.xml"/>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/index.html"> <!-- view="yes" -->
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml" cache="yes"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl" cache="yes"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl" cache="yes"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/intro.html"/>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl" cache="yes"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/info.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlInfoNet.xsl"/>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/modelle.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlListModels.xsl">
+                <cxp:variable name="name_tag" select="'pkg:stelle'"/>
+                <cxp:variable name="name_str" select="'Modelle'"/>
+              </cxp:xsl>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/prozesse.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlListModels.xsl">
+                <cxp:variable name="name_tag" select="'pkg:transition'"/>
+                <cxp:variable name="name_str" select="'Prozesse'"/>
+              </cxp:xsl>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/netze.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlListModels.xsl">
+                <cxp:variable name="name_tag" select="'section'"/>
+                <cxp:variable name="name_str" select="'Subnetze'"/>
+              </cxp:xsl>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/anforderungen.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlRequirementsCatalogue.xsl"/>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/pfad-suche.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlFormSearchPathMenue.xsl"/>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/text-suche.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlFormSearchText.xsl"/>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/text-suche-ergebnis.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlFormSearchTextResult.xsl"/>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/hilfe.html">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%TMPDIR%/main.xml"/>
+        <cxp:xsl name="%TMPDIR%/HtmlHeader.xsl"/>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="%TMPDIR%/HtmlMenu.xsl"/>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/help.html"/>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%TMPDIR%/main.xml"/>
+          <cxp:xsl name="%TMPDIR%/HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+</cxp:make>

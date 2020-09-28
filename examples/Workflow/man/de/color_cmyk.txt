@@ -1,0 +1,5 @@
+
+* CMYK-Farbmodell
+
+>>CMYK ist das Standardfarbmodell der Drucktechnik für den Vierfarbdruck<< s. https://de.wikipedia.org/wiki/CMYK-Farbmodell
+

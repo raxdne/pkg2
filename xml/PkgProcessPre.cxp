@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cxp:make PUBLIC "-//A. Tenbusch//DTD CXPROC Draft//EN" "http://www.tenbusch.info/cxproc/cxp.dtd">
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<!-- net specific instructions -->
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc">
+  <cxp:subst string="%INPUT%" argv="2" default="net/main.xml"/>
+  <cxp:subst string="%INPUTDIR%" dir="%INPUT%"/>
+  <cxp:subst string="%TMPDIR%" env="TMPDIR" default="tmp"/>
+  <cxp:subst string="%LANG%" env="LANG" default="de"/>
+  <cxp:system mkdir="%TMPDIR%"/>
+  <cxp:system message="Copy default files (CSS,...)"/>
+  <cxp:copy from="html/pkg2.css" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="html/pie.css" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="html/pkg2-tools.js" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="html/tipue.js" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="html/logo/logo.png" to="%TMPDIR%" search="yes"/>
+  <cxp:system message="Copy files for standalone CGI"/>
+  <cxp:copy from="html/intro.html" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="CgiPkg2Search.cxp" to="%TMPDIR%/Pkg2Search.cxp" search="yes"/>
+  <cxp:copy from="info.cxp" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="XmlFilter.xsl" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="HtmlHeader.xsl" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="HtmlMenu.xsl" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="HtmlTablePath.xsl" to="%TMPDIR%" search="yes"/>
+  <cxp:copy from="HtmlCopyrights.xsl" to="%TMPDIR%" search="yes"/>
+  <!--  -->
+  <cxp:each name="%N%">
+    <cxp:from>
+      <cxp:plain>
+	<cxp:xml>
+	  <cxp:dir name="%INPUTDIR%" imatch="\.(gif|png|jpg|htm|html)$" depth="3"/>
+	</cxp:xml>
+	<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	  <xsl:output method="text"/>
+	  <xsl:template match="/">
+	    <xsl:for-each select="//file">
+              <xsl:for-each select="ancestor::dir[@name and not(@name = '.')]">
+                <xsl:if test="@prefix">
+                  <xsl:value-of select="concat(@prefix,'/')"/>
+                </xsl:if>
+                <xsl:value-of select="concat(@name,'/')"/>
+	      </xsl:for-each>
+              <xsl:value-of select="concat(@name,' ')"/>
+	    </xsl:for-each>
+	  </xsl:template>
+	</xsl:stylesheet>
+      </cxp:plain>
+    </cxp:from>
+    <cxp:system message="Copying image '%N%' to '%TMPDIR%/'"/>
+    <cxp:copy from="%N%" to="%TMPDIR%/"/>
+  </cxp:each>
+  <!-- cache main xml -->
+	<cxp:xml cacheas="#main#xml#">
+		<cxp:xml name="%INPUT%" />
+		<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pkg="http://www.tenbusch.info/pkg" xmlns:pie="http://www.tenbusch.info/pie" version="1.0">
+			<xsl:output method="xml"/>  
+			<xsl:variable name="id_lang" select="'%LANG%'"/>
+			<xsl:template match="@*|node()">
+				<xsl:choose>
+					<!-- in valids -->
+					<xsl:when test="self::pkg:*[(name() = 'pkg:stelle' or name() = 'pkg:transition') and not(child::import) and not(child::abstract)]">
+						<xsl:element name="{name()}">
+							<xsl:copy-of select="@*"/>
+							<xsl:apply-templates select="*"/> 
+							<xsl:element name="import">
+								<xsl:attribute name="name">
+									<xsl:value-of select="concat('man/',$id_lang,'/',@id,'.txt')"/>
+								</xsl:attribute>
+							</xsl:element >
+						</xsl:element >
+					</xsl:when>
+					<xsl:when test="child::translation[@lang=$id_lang]">
+						<xsl:element name="{name(.)}">
+							<xsl:copy-of select="@*"/> 
+							<xsl:apply-templates select="child::translation"/> 
+						</xsl:element>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:copy>
+							<xsl:apply-templates select="@*|node()"/> 
+						</xsl:copy>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:template>     
+			<xsl:template match="translation">
+				<xsl:choose>
+					<xsl:when test="@lang=$id_lang">
+						<xsl:apply-templates/>
+					</xsl:when>
+					<xsl:otherwise>
+						<!-- ignore other languages -->
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:template>
+		</xsl:stylesheet>
+	</cxp:xml>
+  <!-- main xml -->
+  <cxp:xml name="%TMPDIR%/main.xml" cache="yes">
+    <cxp:xml>
+      <cxp:xml>
+        <pie import="yes" locator="no" tags="no" todo="no" context="%INPUTDIR%">
+	  <import name="#main#xml#"/>
+	</pie>
+      </cxp:xml>
+      <cxp:xsl name="XmlCleanUpRelations.xsl"/>
+      <cxp:xsl name="XmlCleanUp.xsl"/>
+      <cxp:xsl name="XmlCleanUpRelations.xsl"/>
+      <cxp:xsl name="XmlCleanUp.xsl"/>
+    </cxp:xml>
+  </cxp:xml>
+  <!-- check report for main xml -->
+  <cxp:plain name="%TMPDIR%/check.txt">
+    <cxp:xml name="%TMPDIR%/main.xml"/>
+    <cxp:xsl name="NetCheck.xsl"/>
+  </cxp:plain>
+  <!-- PIE -->
+  <cxp:xml name="%TMPDIR%/main.pie">
+    <cxp:xml name="%TMPDIR%/main.xml"/>
+    <cxp:xsl name="pkg2pie.xsl"/>
+  </cxp:xml>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="%TMPDIR%/main.html">
+    <cxp:xml name="%TMPDIR%/main.pie"/>
+    <cxp:xsl name="pie2html.xsl">
+      <cxp:variable name="flag_toc" select="true()"/>
+      <cxp:variable name="flag_tags" select="false()"/>
+      <cxp:variable name="flag_llist" select="true()"/>
+      <cxp:variable name="toc_display"  select="'block'"/>
+    </cxp:xsl>
+  </cxp:xhtml>
+  <!-- Mindmap -->
+  <cxp:xml name="%TMPDIR%/main.mm">
+    <cxp:xml name="%TMPDIR%/main.pie"/>
+    <cxp:xsl name="pie2mm.xsl"/>
+  </cxp:xml>
+  <cxp:xml name="%TMPDIR%/main.xmmap">
+    <cxp:xml name="%TMPDIR%/main.mm"/>
+    <cxp:xsl name="mm2xmmap.xsl"/>
+  </cxp:xml>
+</cxp:make>

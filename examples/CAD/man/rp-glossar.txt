@@ -1,0 +1,323 @@
+3D-Printing (3D-P)
+
+Die Pulverteilchen werden mit Hilfe eines von einer D se definiert
+eingespritzten Binders miteinander verklebt, so da  ein Schicht f r Schicht
+aufgebautes Modell entsteht. Der eigentliche Stoffzusammenhalt (Festigkeit)
+wird erst  ber die Nachbereitung (Austreiben des Binders, Nachversintern) des
+Modells erreicht. Dabei kann es zu ma lichen Ver nderungen am Bauteil kommen.
+
+s. "http://web.mit.edu/afs/athena/org/t/tdp/www/"
+
+Die Materialauswahl f r dieses Verfahren ist theoretisch unbegrenzt. Dies zeigt
+sich auch in der Vielzahl der lizensierten Abwandlungen dieses grundlegenden
+Verfahrens.
+
+  • Z Corporation "http://www.zcorp.com" (Concept Modeller)
+  • Extrude Hone "http://www.extrudehone.com/" (ProMetal), RT-Verfahren,
+    Material Metallpulver
+  • Soligen (DSPC) "http://www.partsnow.com/about/06.shtml"
+
+Haupts chlich die Eigenschaften des Binders und die erforderliche
+Nachbehandlung schr nken das verwendbare Material ein.
+
+Beam Interference Solidification (BIS)
+
+Ausreichende Energie zur Polymerisation wird durch sich kreuzende
+Laser-Strahlen erzeugt. (Wirkungsweise ist  hnlich der von DBLC)
+
+Controlled laser forming (CLF)
+
+Blechschneiden und Umformen (Fa. Trumpf?)
+
+Direct Shell Production Casting (DSPC)
+
+s. 3D-Printing
+
+Mit Hilfe dieses Prinzips werden Keramikformen f r das Metallgie en erzeugt, so
+da  dieses Verfahren als "Rapid-Tooling"-Verfahren bezeichnet werden kann.
+
+[uziel97a]
+
+Electrical Discharge Machining (EDM)
+
+Dual Beam Laser Curing (DBLC)
+
+Zwei Laser-Strahlen werden so gesteuert, da  sie sich r umlich in einem
+Polymerbad treffen und so die zur  rtlichen Polymerisation n tige Energiedichte
+schaffen. Die von nur einem Laserstrahl ber hrten Bereiche bleiben unver ndert
+bzw. kehren zu ihrem Ausgangszustand zur ck.
+
+Die Bauplattform befindet sich w hrend des gesamten Vorgangs fest im Polymerbad
+und wird erst nach Fertigstellung des gefertigten Bauteils herausgefahren.
+
+Zur Zeit ist noch keine optimale Harzkombination zur Verwendung dieser Technik
+gefunden worden.
+
+Freeform Powder Molding (FPM)
+
+Studie und Patent "http://www.rpi.edu/~rocks/"
+
+Fused Deposition Modeling (FDM)
+
+In einer beheizbare D se wird das zu verarbeitende Material aufgeschmolzen und
+in geometrisch definierter Form, mit hoher Temperatur und Druck auf die
+darunterliegenden Schichten aufgetragen. Mit diesem relativ simplen Verfahren
+ist es m glich die erforderlichen Maschinen kompakte zu gestalten.
+
+Die Materialauswahl ist auf niedrig schmelzende Werkstoffe begrenzt, es lassen
+sich aber in einem Bauproze  verschiedene Materialien kombinieren. Es entsteht
+kein Restmaterial und es werden keine L sungsmittel ben tigt.
+
+Sehr feine Bauteilstrukturen sind wegen der Gr  e der D sen ffnung nicht mehr
+darstellbar.
+
+Stratasys (FDM, Genisys) "http://www.stratasys.com"
+
+Fused Deposition of Ceramics (FDC)
+
+Ink-Jet Head Technology (IJH)
+
+InkJet Manufacturing (IJM)
+
+»Three dimensional plotting«
+
+Sanders Prototype Inc. SPI
+
+ModelMaker 6Pro, II
+
+Laser Engineered Net Shaping (LENS)
+
+Optomec "http://www.optomec.com"
+
+Lasform Technology
+
+Ein Laserstrahl schmilzt zugef hrtes Titanpulver auf, das danach als Schicht
+erstarrt. Der wichtigste Unterschied zum SLS besteht darin, da  kein Pulverbad
+sondern eine Zuleitung eingesetzt wird.
+
+AeroMet "http://www.aerometcorp.com/"
+
+Laser Chemical Vapor Deposition (LCVD)
+
+Verfahren zur Herstellung feinster Strukturen Die Strukturen werden durch eine
+von der Laserenergie(zwei sich kreuzende Laserstrahlen) ausgel ste Reaktion
+eines aluminium- und eines sauerstoffhaltigen Gases durch Bildung von
+Aluminiumoxid erzeugt.
+
+  • es k nnen sehr filigrane Strukturen erzeugt werden
+  • St tzkonstruktionen sind nicht erforderlich
+  • es ist ein Produktions- und nicht nur ein Prototypenverfahren
+
+Beispiel: S. 68 [gebhardt]
+
+Layered Manufacturing Techniques (LMT)
+
+Layer Laminated Manufacturing (LLM)
+
+Die Schichten eines 3D-Modells werden nacheinander aus einem Folienmaterial
+ausgeschnitten und miteinander verbunden.
+
+Beim Laminated Object Manufacturing (LOM) schneidet ein Laser die Kontur aus
+beschichteten Papierbahnen und eine Heizrolle verklebt die einzelnen Lagen
+durch Aktivieren der Klebeschicht.
+
+Im Unterschied dazu wird bei der Paper Lamination Technology (PLT) das Papier
+mit einem Messer geschnitten und danach ebenfalls verklebt.
+
+Eine starke Vereinfachung stellt das Verfahren des JP System 5 dar. Die Lagen
+werden in einem Plotter einzeln geschnitten und dann per Hand verklebt.
+
+Durch das einfache Prinzip arbeitet das LLM- bzw. LOM-Verfahren relativ schnell
+und es ist m glich, verschiedene Materialien zu kombinieren (schichtweise).
+
+Interne Hohlr ume erh hen den Entformungsaufwand, Flache Schr gen weisen einen
+ausgepr gten Stufeneffekt auf und der Anteil an nicht wieder verwendbarem
+Restmaterial (»Crosshatches«, St tzen) ist relativ hoch. Eine Nachbehandlung
+(Beschichten) ist erforderlich, damit keine Feuchtigkeit in das Papiermodell
+eindringt. Das fertige Bauteil verf gt  ber ausgepr gt anisotrope
+Materialeigenschaften.
+
+Multi-Jet Modeling (MJM)
+
+Thermojet (Actua) "http://www.3dsystems.com/products/Actual.asp"
+
+Multiphase Jet Solidification (MJS)
+
+  • Pulveraufschmelzen, niedrigschmelzende Legierungen [greulich95a]
+
+Nickel Ceramic Composite Tooling Systems (NCC-Tooling Systems)
+
+Ergebnis: Genauigkeit, St rke/Festigkeit und Haltbarkeit von Metall-Formen
+"NCC-Tooling-Systems" arbeiten so  konomisch wie RP-Systeme
+
+CBC-Chemically Bonded Ceramic
+
+  • hat ein  hnliches Abk hlverhalten wie Stahl und Nickel
+  • nimmt gut Druckkr fte auf
+  • es kann auch gro e Bauteile erzeugen
+
+"http://cad.umd.edu/xin/rp/company/MDHOMEPAGE.html"
+
+Paper Lamination Technology (PLT)
+
+s. LLM
+
+ProMetal
+
+s. 3D-Printing
+
+Rapid Micro Product Development (RMPD)
+
+Verfahren wird vom Hersteller MicroTech ("http://www.microtec-d.com") nicht n 
+her beschrieben.
+
+Rapid Freezing Prototyping
+
+Fertigen von Eismodellen f r Sandformen als Alternative zu konventionellen
+Holzmodellen. Es funktioniert, indem man aus eines D se gespritztes Wasser w 
+hrend des Auftragens gefriert. Dabei wird unter abgek hlter Atmosph re
+gearbeitet.
+
+  • preisg nstiges, umweltfreundliches Material
+  • genaues Teilefertigen und gute Oberfl chenqualit ten m glich
+  • M glichkeit, transparente oder farbige Teile herzustellen
+  • noch unerprobt
+
+"http://www-ec.njit.edu/riml/proj/rfp/rfp.html"
+
+Selective Area Laser Deposition (SALD)
+
+Selective Laser Sintering (SLS)
+
+Eine d nne Pulverschicht wird auf einer Plattform aufgetragen und mit Hilfe
+eines Laserstrahls die n tige Energiedichte zum  rtlichen Aufschmelzen des
+Pulvers erzeugt. W hrend des Erstarrens entsteht eine feste stoffschl ssige
+Verbindung mit den darunterliegenden Schichten. Mit einer Inertgas-Atmosph re
+wird die Oxydation des Materials beim Sintervorgang vermieden. Das gesamte
+Pulverbett mu  bis in die N he der Schmelztemperatur vorgeheizt werden.
+
+Das nicht versinterte Material kann nach der Fertigstellung entfernt und
+wiederverwendet werden. Es kann eine Vielzahl unterschiedlicher pulverf rmiger
+Materialien (z.B. Kunststoff, Metall-Polymer-Kombinationen, Metall) verarbeitet
+werden. Je nach Werkstoff weisen die Modelle mechanisch und thermisch  hnliche
+Eigenschaften wie das zuk nftige Bauteil auf. Aus der Gr  e der Pulverteilchen
+ergibt sich die erreichbare Genauigkeit und Oberfl chenqualit t.
+
+Shape Deposition Manufacturing (SDM)
+
+Diese Techologie kombiniert konventionelle und neue Techniken, indem zuerst
+verfl ssigtes Material durch eine D se aufgebracht und verfestigt wird und
+anschliessend mechanisch bearbeitet. Abh ngig von der Komplexit t des zu
+fertigenden Bauteils ist es m glich, die Schichtdicken zu variieren. Es gibt
+drei M glichkeiten das Bauteil in einzelne Segmente aufzuteilen.
+Hinterschnittfreie Lagen werden gefertigt durch Aufbringen des Bauteilmaterials
+und anschliessend schneidender Bearbeitung. Anschlie end ist es n tig, durch
+das Aufbringen des St tzmaterials die Schicht "l ckenlos" zu gestalten und die
+Schicht planzufr sen, damit das fehlerfreie Auftragen der n chsten Schicht gew 
+hrleistet wird Hinterschnittene Strukturen werden durch Aufbringen des St 
+tzmaterials hergestellt und mit Hilfe trennender Verfahren auf die negative
+Form des zu fertigenden Bauteils gebracht so da  das anschlie end aufgebrachte
+Bauteilmaterial die gew nschte Form annimmt, wenn es auf das Negativ
+aufgetragen wird. Enth lt das zu fertigende Segment hinterschnittene und
+hinterschnittfreie Srukturen mu  dieses weiter in Schichten zerteilt werden, so
+da  entweder der erste oder zweite Fall entsteht.Ist dieses nicht m glich, mu 
+die Schicht schrittweise hergestellt werden. Das hei t, zuerst wird ein Teil
+des Materials aufgetragen, welches hinterschnittfreie Konturen aufweist (ob es
+sich dabei um das Bauteilmaterial oder das St tzmaterial handelt, h ngt von der
+gegebenen Geometrie der Schicht ab), dieses wird dann auf die n tige Form
+gebracht, so da  das als n chstes darauf ausgetragene Material diese Form
+annimmt usw. Die genaue Bearbeitung der Segmente wird durch 5-Achsen
+computergesteuerte CNC-Bearbeitung erreicht. Au erdem besteht die M glichkeit,
+verschiedene Materialien zu kombinieren. Da das St tzmaterial ein anderes ist
+als das Bauteilmaterial, ist es n tig, in der Konstruktion der Maschine
+verschiedene D sen vorzusehen, f r eine Bauteilkonstruktion die mehrere
+Materialen kombiniert ist es m glich weitere D sen vorzusehen, um diese
+heterogene Strukturen zu erzeugen
+
+s. "http://www.cs.cmu.edu/+sdm/"
+
+Solid Foil Polymerisation (SFP)
+
+Verfahren  hnelt dem des LOM, ein Unterschied, die Folien werden nicht mit
+Klebern verbunden sondern durch Polymerisation zusammengeklebt.
+
+Solid Ground Curing (SGC)
+
+Der ebenfalls in Schichten zerlegte 3D-Datensatz wird auf einer transparenten
+Maske ma st blich abgebildet(dies geschieht durch die elektrostatische
+Aufladung auf eine Glasplatte und Aufbringen eines Toners, der bewirkt, da  die
+Glasplatte bez glich der zu verfestigenden Konturen durchsichtig, ansonsten
+undurchsichtig wird,  hnlich der Kopiertechnik) und mit Hilfe starker UV-Lampen
+durch diese Maske auf die Oberfl che des Harzbades projiziert, diese Energie
+verfestigt dann wiederum das Monomer und es entsteht Schicht f r Schicht das
+fertige Bauteil. Nach jeder Belichtung wird das nichtbelichtete noch fl ssige
+Monomer abgesaugt und durch verfl ssigtes Wachs erstezt. Dies wird auf
+Gefriertemperatur abgek hlt und die gesamte Modelloberfl che plangefr st. Das
+nicht abgefr ste Wachs verbleibt im Modell (bis zur Fertigstellung) und bildet
+die St tze der nachfolgenden Modellteile. Zum Abschlu  mu  das Wachs (mit Hilfe
+von Zitronens ure) herausgewaschen werden.
+
+  • Die Fertigung einer Schicht ist durch die Belichtung der gesamten Oberfl 
+    che auf einmal weitgehend unabh ngig von der Komplexit t dieser Schicht,
+    somit ist die ben tigte Zeit zur Fertigung auch unabh ngig vom Bauteil
+  • es besteht die M glichkeit, mehrere Bauteile auf einer Plattform zu
+    plazieren und gleichzeitig zu fertigen
+  • es k nnen nur photosensible Materialien verwendet werden
+  • komplizierter Proze  und dementsprechend schwere Maschine
+  • nicht ganz dichte Masken f hren zu unsauberen Oberfl chen und unscharfen
+    Konturen
+
+Cubital "http://www.cubital.com"
+
+Stereolithography (SLA)
+
+Durch Belichtung mit einem Laserstrahl wird ein fl ssiges Monomerbad  rtlich an
+der Oberfl che zur Polymerisation gebracht. Der Strahl wird so gesteuert, da 
+sein Weg die Fl che des Bauteilquerschnitts in der jeweiligen H he darstellt.
+Durch Absenken der im Monomerbad befindlichen Plattform um die Schichtdicke und
+erneutes Benetzen kann eine neue Schicht an der Oberfl che verfestigt werden.
+So entsteht ein Schicht f r Schicht aufgebautes 3D-Modell aus einem
+Polymerwerkstoff.
+
+Das Verfahren stellt das genaueste aller industriell nutzbaren dar. Es bietet
+die M glichkeit komplexe, interne Hohlr ume zu bauen. Die Transparenz des
+Materials und die Sterilisierbarkeit der Modelle bieten umfangreiche
+Anwendungsm glichkeiten, u.a. in der Medizin.
+
+Bisher sind
+
+  • nur wenige, photosensible Materialien verarbeitbar, - St tzkonstruktionen
+    erforderlich und
+  • die Nachbearbeitungsschitte: Aush rtung in einem Ofen, Reinigen des
+    gefertigten Modells und Entfernen der St tzkonstruktionen erforderlich.
+
+Abwandlungen des Prinzips stellen die Solid Imager Stereolithography (Aaroflex,
+Inc.) und das SOUP/CMET-Verfahren (NTT Data) dar.
+
+Selective Metal Powder Sintering (SMS)
+
+Stratified Objekt Manufacturing (SOM)
+
+Der 3D-Entwurf wird in hinterschnittfreie, plattenf rmige Teilk rper zerlegt,
+und schrittweise durch konventionelle Herstellungsverfahren gefertigt und
+anschlie end montiert.
+
+  • CNC-Maschinen typische Genauigkeit und Oberfl cheng te
+  • SOM-Modelle bringen gr  ere Belastbarkeit als klassische RP-Modelle
+
+Nachteile
+
+  • Praktische Anwendung ist auf entsprechend teilbare Geometrien beschr nkt
+  • mechanische und thermische Eigenschaften weichen durch die Trennung der
+    einzelnen Bauteile vom realen, sp teren Serienteil ab
+
+Abb. 1 Bauteil-1.obj
+
+Thermal Polymerisation (TP)
+
+N tige Energie zur Polymerisation wird durch gezielte W rmezufuhr erreicht
+
+Topographic Shell Fabrication (TSF)
+
+Formus "http://www.formus.com/" (noch in der Entwicklung)
+

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc">
+  <cxp:subst string="%DOCDIR%" argv="2" env="CXP_ROOT"/>
+  <cxp:subst string="%PETRINET%" argv="3" cgi="file"/>
+  <cxp:subst string="%FILTER%" cgi="removed"/>
+  <cxp:subst string="%START%" cgi="start"/>
+  <cxp:subst string="%TARGET%" cgi="target"/>
+  <cxp:subst string="%LMAX%" cgi="l_max" default="99"/>
+  <cxp:system chdir="%DOCDIR%"/>
+  <cxp:system message="%DOCDIR%%PETRINET%"/>
+  <cxp:xml cacheas="#filtered#xml#">
+    <cxp:xml name="%PETRINET%"/>
+    <cxp:xsl name="XmlFilter.xsl">
+      <cxp:variable name="str_filter" select="'%FILTER%'"/>
+    </cxp:xsl>
+  </cxp:xml>
+  <cxp:xhtml name="-">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%PETRINET%"/>
+        <cxp:xsl name="HtmlHeader.xsl">
+           <cxp:variable name="str_prefix" select="'/'"/>
+        </cxp:xsl>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="HtmlMenu.xsl">
+              <cxp:variable name="str_prefix" select="'/'"/>
+            </cxp:xsl>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml>
+                <cxp:xml name="#filtered#xml#"/>
+                <cxp:xsl>
+                  <cxp:xml>
+                    <cxp:pathtable start="%START%" target="%TARGET%" lmax="%LMAX%">
+                      <cxp:xml name="#filtered#xml#"/>
+                    </cxp:pathtable>
+                  </cxp:xml>
+                </cxp:xsl>
+              </cxp:xml>
+              <cxp:xsl name="HtmlTablePath.xsl">
+                <cxp:variable name="str_filter" select="'%FILTER%'"/>
+                <cxp:variable name="prefix_tmp" select="'%TMPDIR%'"/>
+              </cxp:xsl>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <cxp:xhtml>
+          <cxp:xml name="%PETRINET%"/>
+          <cxp:xsl name="HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+  <!--
+-->
+</cxp:make>

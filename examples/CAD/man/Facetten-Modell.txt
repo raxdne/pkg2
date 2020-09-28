@@ -1,0 +1,12 @@
+Abb. Facetten-Modell.gif
+
+Ein Facetten-Modell besteht aus einer Vielzahl von räumlich angeordneten
+Facetten, die in ihrer Summe die Oberflächengeometrie repräsentieren. Die
+Facetten stellen kleine, polygone Einzelflächen dar. Die einfachste Form sind
+Dreiecke.
+
+Als Daten liegen die Raumkoordinaten der Eckpunkte vor. Formate wie STL
+enthalten zusätzlich den Normalen-Vektor jeder Facette, der die Materialseite
+des Volumens bestimmt.
+
+Abb. Otto-von-Guericke-Facetten-Modell.gif Beispiel

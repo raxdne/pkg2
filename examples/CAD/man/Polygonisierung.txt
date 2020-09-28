@@ -1,0 +1,47 @@
+
+* Beschreibung
+
+Vernetzung einer räumlichen PW (bei Dreiecksvernetzung auch als Triangulation
+bezeichnet)
+
+Wenn aus den erfaßten Punktedaten kein änderbares CAD-Modell, sondern lediglich
+ein Prototyp entstehen soll, kann aus den Daten ein facettenbasiertes
+Volumenmodell generiert werden (Polygonisierung). Dafür werden zwischen
+benachbarten Oberflächenpunkten Dreiecke aufgespannt. In ihrer Summe bilden sie
+eine vollständige Beschreibung des Volumens. Diese Repräsentationsform stellt
+als STL-Format die Basis für den Datentransfer zu RP-Maschinen dar.
+
+Abb. Otto-von-Guericke-Polygonisierung.gif
+
+Generierung aus einem CAD-Modell
+
+Aus volumenorientierten CAD-Systemen können die Volumenmodelle direkt und in
+hoher Qualität exportiert werden. Da dies i.d.R. ohne zusätzliche Eingriffe von
+Seiten des Benutzers erfolgt, soll dieser automatische Export dem 3D-CAD
+zugeordnet werden.
+
+Generierung aus einem Voxel-Modell
+
+Die Polygonisierung von einer Punktewolke ausgehend verdeutlicht den
+Unterschied zwischen Punktemodell und Punktewolke. Jede einzelne Facette
+beschreibt ein Oberflächensegment, d.h. die Punkte zwischen denen die Facetten
+aufgespannt werden, müssen ebenfalls Oberflächensegmente repräsentieren.
+
+Mit spezieller Software, z.B. »Bi-directional IGES/STL Translator« (s. http://
+www.compunix-usa.com/products/igesstl/igesstl.htm) ist es auch möglich,
+Facettenmodelle direkt aus Flächendaten (B-Rep) zu generieren. Diese Form der
+Polygonisierung bereitet an Flächenübergängen oft Probleme.
+
+Das Ergebnis sollte eine vollständige, «wasserdichte« Volumenbeschreibung als
+Facetten-Modell sein. Nachträgliche Reparaturen am Facettenmodell sind sehr
+aufwendig.
+
+Diese direkte Verbindung zwischen Digitalisierung und RP ist sinnvoll, wenn
+
+  • die zu beschreibenden Formen zu aufwendig für eine konventionelle
+    Modellierung sind (s. »Otto«),
+  • schnell reale Kopien einer Vorlage erforderlich sind,
+  • die Daten keine weiteren oder nur geringe Änderungen erfordern oder
+  • Facetten-Daten für reine Visualisierungszwecke (VRML, PoVray) gebraucht
+    werden.
+

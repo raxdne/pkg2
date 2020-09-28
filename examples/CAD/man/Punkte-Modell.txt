@@ -1,0 +1,6 @@
+* Beschreibung
+
+Abb. rechnerinterne-modelle.gif
+
+Ein Punkte-Modell besteht aus einer Menge von Punkten, die einzelne
+Oberflächenpunkte (Eckpunkte, Kanten, plane Flächen) repräsentieren

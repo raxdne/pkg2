@@ -1,0 +1,17 @@
+* Beschreibung
+
+»Während des Konstruktionsprozesses entsteht beim Konstrukteur eine Vorstellung
+vom beabsichtigten realen technischen Objekt. ... Der Konstrukteur entwickelt
+eine bestimmte gedankliche Vorstellung in Form eines Mentalen Modells, wie die
+Aufgabe gelöst werden könnte ...« [1]
+
+Diese räumliche Vorstellung kann mit entsprechenden Hilfsmitteln, z.B. SW zur
+Darstellung von rechnerinternen Daten, aus allen Modellen gewonnen werden.
+Sollte dies nicht möglich sein, spricht dies gegen die Vollständigkeit des
+Modells.
+
+Literatur
+
++ Pahl, G.; Beitz, W.: Konstruktionslehre: Methoden und Anwendung. 4. Aufl.
+    Berlin : Springer, 1997 (Springer-Lehrbuch)
+

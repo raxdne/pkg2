@@ -1,0 +1,45 @@
+* Rapid-Prototyping-Prozeß
+
+In einem RP-Prozeß werden Prototypen aus einzelnen Lagen aufgebaut. Dafür
+werden Schichten aus 3D-CAD-Modellen errechnet und Lage für Lage aufgetragen.
+
+Die einzelnen Verfahren unterscheiden sich neben ihrem Prinzip in
+
+- den verarbeitbaren Materialien,
+
+- der Baugeschwindigkeit,
+
+- der Fertigungsgenauigkeit sowie
+
+- der erforderlichen Nachbearbeitung.
+
+Die Ausgangsmaterialien (Kunstharz, Wachs, Sintermetalle, Papier, ...) können
+als Pulver, Flüssigkeit oder Folie vorliegen. Beispiele sind das
+Metallsinterpulver beim SLS, die Polymerflüssigkeit bei der SLA oder das Papier
+beim LOM.
+
+Die wichtigsten RP-Verfahren sind
+
+
+- Stereolithografie (SLA),
+
+- Laminated Objects Manufacturing (LOM),
+
+- Fused Deposition Modeling (FDM) und
+
+- Selective Laser Sintering (SLS).
+
+Die entstehenden Prototypen haben ebenfalls unterschiedliche Eigenschaften
+hinsichtlich Festigkeit und Oberflächenqualität.
+
+Die erreichbaren Genauigkeiten hängen vom Verfahren, den Fertigungsparametern
+und der Lagerung ab.
+
+Das STL-Facettenmodell stellt das Standard-Eingabeformat für RP-Maschinen dar.
+
+An einigen Systemen ist eine zusätzliche Vorbereitung der Daten
+(Pre-Processing), das Slicen erforderlich. Diese errechneten Schichtdaten
+werden in einem Zwischenformat gespeichert (s. ModelMaker II mit ModelWorks)
+und an den Steuerrechner der RP-Maschine übertragen.
+
+Abb. rp.jpg

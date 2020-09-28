@@ -1,0 +1,64 @@
+Abb. kolibri.gif Scanner kolibri
+
+Beschreibung
+
+Die Voraussetzung für diesen Prozeß ist ein vorliegendes reales Modell. Je nach
+Form, Materialeigenschaften und Vorgaben muß ein geeignetes Verfahren gewählt
+und die Digitalisierung durchgeführt werden.
+
+www-Links
+
+REPLICA,
+REVERSA,        http://
+ModelMaker      www.3dscanners.com
+(3dscanners)
+
+Hyscan 45       http://
+(Hymarc)        www.hymarc.com/
+
+VideoSculpture  http://www.kreon.com
+(Kreon)
+
+DIGIBOT         http://
+(Digibotics)    www.digibotics.com/
+
+SURVEYOR RE-*   http://
+(Laser Design)  www.laserdesign.com/
+
+WB4, Model-15,  http://
+3030RGB/HIREZ/  www.cyberware.com/
+MM (Cyberware)
+
+CyLan 3D        http://www.intecu.de
+(INTECU)        /
+
+                http://
+kolibri (IOF    www.iof.fhg.de/
+Jena)           german/aufgaben/A2/
+                kalibri.html
+
+Virtuoso        http://
+(Visual         www.visint.com/
+Interface)
+
+optoCAM,        http://
+optoTOP         www.breuckmann.com/
+(Breuckmann)
+
+COMET           http://
+(Steinbichler)  www.steinbichler.com
+                /
+
+Tri Top, ATOS   http://
+(Capture3d,     www.capture3d.com/,
+GOM)            http://
+                www.gom-online.de
+
+(TECMATH)       http://
+                www.tecmath.de/
+
+Literatur
+
+ 1.
+ 2.
+

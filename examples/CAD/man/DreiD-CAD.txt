@@ -1,0 +1,11 @@
+Abb. DreiD-CAD.gif
+
+Die 3D-CAD-Modellierung bietet die umfangreichsten Möglichkeiten, die von der
+einfachen Modellierung mit Zeichnungserstellung über das Modellieren komplexer
+Geometrien bis zur Erstellung von kompletten Produktdatenmodellen.
+
+Produktdatenmodelle sollten ein gültiges Volumenmodell des Produkts beinhalten.
+
+Die internen CAD-Modelle werden i.d.R. nicht ausgetauscht. Aus diesem Grund
+sind nur die aufgeführten Modelle als Ein- und Ausgangsdaten zu sehen.
+

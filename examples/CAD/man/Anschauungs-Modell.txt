@@ -1,0 +1,14 @@
+
+Abb. vorlage.gif
+
+Ein Anschauungs-Modell stellt eine erste physische Repräsentation der Geometrie
+dar. Es dient lediglich dem Informationsaustausch über die Form. Es werden nur
+die ungefähre Form und die Proportionen eingehalten.
+
+Typische Anschauungs-Modelle sind Design- oder Architektur-Studien aus
+Materialien wie Ton, Holz, Keramik, Gips.
+
+Für eine direkte Übernahme in ein CAD-Modell reicht die Qualität in der Regel
+nicht aus. Die nächst höhere Qualitätsstufe stellt dann das Proportions-Modell
+dar.
+

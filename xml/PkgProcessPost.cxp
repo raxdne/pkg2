@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc" thread="yes">
+  <cxp:subst string="%TMPDIR%" env="TMPDIR" default="tmp"/>
+  <!--  files -->
+  <cxp:each name="%N%">
+    <cxp:from>
+      <cxp:plain>
+        <cxp:xml name="%TMPDIR%/main.xml" cache="yes"/>
+        <cxp:xsl name="PlainListIds.xsl"/>
+      </cxp:plain>
+    </cxp:from>
+    <cxp:make>
+      <cxp:xhtml name="%TMPDIR%/%N%.html">
+        <html>
+          <cxp:xhtml>
+            <cxp:xml name="%TMPDIR%/main.xml"/>
+            <cxp:xsl name="HtmlHeader.xsl" cache="yes"/>
+          </cxp:xhtml>
+          <body>
+            <div id="ui">
+              <cxp:xhtml>
+                <cxp:xsl name="HtmlMenu.xsl" cache="yes"/>
+              </cxp:xhtml>
+              <div id="content">
+                <cxp:xhtml>
+                  <cxp:xml name="%TMPDIR%/main.xml"/>
+                  <cxp:xsl name="HtmlManualPage.xsl" cache="yes">
+                    <cxp:variable name="id_element" select="'%N%'"/>
+                    <cxp:variable name="prefix_tmp" select="'%TMPDIR%'"/>
+                  </cxp:xsl>
+                </cxp:xhtml>
+              </div>
+            </div>
+            <!--  -->
+            <cxp:xhtml>
+              <cxp:xml name="%TMPDIR%/main.xml"/>
+              <cxp:xsl name="HtmlCopyrights.xsl" cache="yes"/>
+            </cxp:xhtml>
+          </body>
+        </html>
+      </cxp:xhtml>
+    </cxp:make>
+  </cxp:each>
+  <cxp:xml name="%TMPDIR%/tip_data.xml">
+    <!-- Such-Index -->
+    <cxp:xml name="%TMPDIR%/main.xml"/>
+    <cxp:xsl name="XmlSearchIndex.xsl"/>
+  </cxp:xml>
+  <cxp:xml name="%TMPDIR%/requirements.xml">
+    <cxp:xml name="%TMPDIR%/main.xml"/>
+    <cxp:xsl name="ListRequirementIds.xsl"/>
+  </cxp:xml>
+</cxp:make>

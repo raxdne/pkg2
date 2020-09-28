@@ -1,0 +1,12 @@
+
+* Beschreibung
+
+»Unter Virtuelle Realität wird eine neuartige Form der Mensch/
+Maschine-Interaktion verstanden, welche durch dreidimensionale animierte
+Graphik aus dem Computer den Benutzer in eine künstliche Wirklichkeit versetzt
+... Virtuelle Realität (VR) ist eine Simulation verschiedener Eigenschaften
+unserer Realität mittels Computer. In den meisten Fällen beinhalten diese
+Eigenschaften visuelle Eindrücke und interaktive Reaktionen der Simulation.« (
+VRVis Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH Wien)
+
+Abb. Virtuelle-Realitaet.jpg VR Bildquelle: VRCA (RWTH Aachen)

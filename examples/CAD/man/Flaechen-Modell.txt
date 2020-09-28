@@ -1,0 +1,25 @@
+
+Abb. Flaechen-Modell.gif
+
+Ein Flächen-Modell beschreibt die Oberflächengeometrie hauptsächlich durch
+Flächen. Zum Begrenzen dieser Flächen werden Trimm-Kurven verwendet, die als
+2D-Kurven auf der Fläche verlaufen.
+
+Es gibt einige mathematisch unterschiedliche Flächen wie
+
+  • Bèzier,
+  • Coons,
+  • NURBS.
+
+Beispiel
+
+Abb. spoiler-1.gif
+
+Literatur
+
+ 1. Piegl, L.; Tiller, W.: The NURBSBook. 2. Aufl. Springer, 1997 (Monographs
+    in Visual Communications)
+
+	2. Wannemacher, B.; Hull, S.: Ist die Genauigkeit genau richtig? In: CAD-CAM
+    Report (1999), Nr. 11, S. 90-97
+

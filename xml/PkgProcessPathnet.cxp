@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc">
+  <cxp:subst string="%TMPDIR%" env="TMPDIR" default="tmp"/>
+
+  <subst string="%PETRINET_IN%" argv="2"/>
+  <subst string="%ID%"     argv="3" default="pathnet"/>
+  <subst string="%START%"  argv="4" default=""/>
+  <subst string="%TARGET%" argv="5" default=""/>
+  <subst string="%LMAX%"   argv="6" default="4"/>
+
+  <subst string="%PETRINET_OUT%" to="%TMPDIR%/%ID%.xml"/>
+
+  <cxp:system mkdir="%TMPDIR%"/>
+
+  <!--  -->
+  <cxp:xml name="%PETRINET_OUT%" cache="yes">
+    <cxp:xml name="%PETRINET_IN%" cache="yes"/>
+    <cxp:xsl>
+      <cxp:xml name="%TMPDIR%/%ID%.xsl">
+	<cxp:pathnet start="%START%" target="%TARGET%" lmax="%LMAX%">
+	  <cxp:xml name="%PETRINET_IN%"/>
+          <cxp:xsl name="XmlCleanUpRelations.xsl"/>
+          <cxp:xsl name="XmlCleanUp.xsl"/>
+	</cxp:pathnet>
+      </cxp:xml>
+    </cxp:xsl>
+    <cxp:xsl name="XmlCleanUp.xsl"/>
+  </cxp:xml>
+
+    <cxp:plain name="%TMPDIR%/%ID%.dot">
+      <cxp:xml name="%PETRINET_OUT%"/>
+      <cxp:xsl name="DotGraph.xsl">
+        <cxp:variable name="color_default" select="'grey'"/>
+        <cxp:variable name="flag_color" select="true()"/>
+        <cxp:variable name="flag_style" select="false()"/>
+        <cxp:variable name="flag_edge"  select="true()"/>
+        <cxp:variable name="flag_subnet" select="false()"/>
+      </cxp:xsl>
+    </cxp:plain>
+
+    <cxp:system exec="dot   -T cmapx -o %TMPDIR%/graph_%ID%.cmapx   %TMPDIR%/%ID%.dot"/>
+    <cxp:system exec="dot   -T png   -o %TMPDIR%/graph_%ID%.png   %TMPDIR%/%ID%.dot"/>
+    <cxp:system exec="dot   -T ps2   -o %TMPDIR%/graph_%ID%.eps   %TMPDIR%/%ID%.dot"/>
+    <cxp:system message="circo -T png   -o %TMPDIR%/graph_%ID%-c.png %TMPDIR%/%ID%.dot"/>
+
+    <cxp:xhtml name="%TMPDIR%/%ID%.html" view="no">
+      <cxp:xml name="%PETRINET_OUT%"/>
+      <cxp:xsl name="HtmlManualPagePathnet.xsl">
+        <cxp:variable name="prefix_tmp" select="'%TMPDIR%'"/>
+        <cxp:variable name="id_main" select="'%ID%'"/>
+      </cxp:xsl>
+    </cxp:xhtml>
+
+</cxp:make>

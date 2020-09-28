@@ -1,0 +1,4 @@
+* Beschreibung
+
+Aus der vorgegebenen Geometrie wird ein CNC-Programm abgeleitet, das die
+erforderlichen Werkzeugbewegungen, z.B. für Fräser, Bohrer, Laser, enthält.

@@ -1,0 +1,18 @@
+
+Eine Punkte-Wolke besteht aus einer mehr oder weniger dichten Ansammlung von
+Punktdaten von Oberflächenpunkten. Der Unterschied zum Punktemodell ist die
+flächenhafte Beschreibung der Oberflächengeometrie und die damit verbundene
+größere Datenmenge.
+
+Da digitale Werte diskret und diskontinuierlich sind, repräsentiert jeder Punkt
+einer flächenorientierten Digitalisierung einen kleinen Ausschnitt der
+Oberfläche. Die Größe dieses Ausschnittes wird durch die Auflösung
+(Sampling-Rate, Punkte pro mm) bestimmt.
+
+Diese flächige Repräsentation, vergleichbar mit der Volumen-Repräsentation
+eines Voxels, stellt den Unterschied zum Punktemodell dar.
+
+Als Daten sind die Raumkoordinaten der Punkte in kartesischer, zylindrischer
+oder sphärischer Form enthalten.
+
+Abb. Otto-von-Guericke-Punkte-Wolke-3.gif

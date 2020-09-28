@@ -1,0 +1,7 @@
+
+Abb. housing2.gif (Bildquelle: Transcendata Europe Ltd)
+
+Ein Netz-Modell stellt ein u.U. vereinfachtes und mit zusätzlichen,
+berechnungsbezogenen Informationen (z.B. FEM-Netz) versehenes Geometriemodell
+dar.
+

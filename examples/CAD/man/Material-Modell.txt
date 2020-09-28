@@ -1,0 +1,6 @@
+
+Für das Material-Modell werden neben den vorangegangenen geometrischen Merkmale
+auch stoffliche Eigenschaften zur Unterscheidung herangezogen. Dieses Modell
+weist bereits alle physikalischen Eigenschaften des späteren Produktes auf
+(Masse, Festigkeit, Dynamik usw.).
+

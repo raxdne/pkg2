@@ -1,0 +1,6 @@
+Abb. housing1.gif Bildquelle: Transcendata Europe Ltd
+
+Die Vernetzung dient dem Erstellen von geometrischen Berechnungsmodellen (FEM,
+BEM, ...). Ein ggf. vereinfachtes Geometriemodell wird mit zusätzlichen
+Informationen für die numerische Berechnung bestimmter Eigenschaften versehen
+(auch als Pre-Processing bezeichnet).

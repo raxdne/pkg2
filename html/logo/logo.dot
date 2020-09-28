@@ -1,0 +1,27 @@
+//
+// Logo
+//
+
+digraph pkg2 {
+fontname = "Helvetica"
+fontsize = "12"
+rankdir = LR
+//bgcolor = "grey"
+
+node [
+  fontname = "Helvetica"
+  fontsize = "20"
+//  fixedsize= "true"
+//  style="bold"
+//  bgcolor = "white"
+];
+
+
+"p" [label = "P", shape="circle"];
+"k" [label = "K", shape="box"];
+"g" [label = "G", shape="circle"];
+
+"p" -> "k";
+"k" -> "g";
+
+} // end of graph

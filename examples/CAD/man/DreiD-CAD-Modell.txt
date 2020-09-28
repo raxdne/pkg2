@@ -1,0 +1,10 @@
+
+Abb. DreiD-CAD-Modell.gif
+
+Ein 3D-CAD-Modell wird in einem CAD-System aufgebaut und mit allen
+Informationen (z.B. Topologie und Entstehungsgeschichte) gespeichert. Damit
+stellt es i.d.R. das informationsreichste rechnerinterne Modell dar.
+
+Eine Überführung in andere CAD-Systeme ist im Normalfall nur eingeschränkt
+möglich (z.B. bei gleichem Modellierkern).
+

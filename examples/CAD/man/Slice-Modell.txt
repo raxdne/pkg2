@@ -1,0 +1,5 @@
+
+Ein Schichten-Modell enthält die Konturinformationen für den Aufbau der
+Geometrie aus parallelen Schichten.
+
+Abb. Slice-Modell.gif Schichten-Modell

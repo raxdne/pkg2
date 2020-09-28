@@ -1,0 +1,52 @@
+Abb. Mentales-Modell.gif
+
+Während Sie dieses Bild betrachten führen Sie, mehr oder weniger unbewußt, eine
+Modellbildung. Sie versuchen die abgebildete Geometrie zu verstehen und bilden
+sich dabei ein Mentales Modell
+
+Die einfachste Form der Modellbildung stellt das Betrachten eines real
+vorliegenden Modells (Gegenstand) dar. Dieser Vorgang ist so weit
+automatisiert, daß er kaum mehr wahrgenommen wird. Aus der Betrachtung
+entsteht, je nach Vermögen und Übung, eine deutliche, wiederholt abrufbare
+Vorstellung von der Geometrie des Körpers (Mentales Modell).
+
+Bei komplexeren Formen können nicht alle Details erfaßt werden und es werden
+nur Proportionen statt genauer Abmessungen im Gedächtnis gespeichert.
+
+Je nach Vorstellungsvermögen können auch von 2D-Darstellungen wie Skizzen,
+Zeichnungen oder Bildern schnell Vorstellungen von der Geometrie gebildet
+werden.
+
+Eine Modellbildung nach einer verbalen Beschreibung der Geometrie ist bei
+weniger komplexen Modellen möglich sehr effektiv möglich. In der Wortgruppe
+»Würfel mit 100mm Kantenlänge« stecken alle erforderlichen Informationen zu
+diesem Objekt und es ist damit möglich, diese Geometrie vollständig zu
+reproduzieren. Für komplizierte Formen steigt der Beschreibungsaufwand bis über
+die Grenze der Praktikabilität.
+
+Grundsätzlich sind fast alle Datenmodelle für die Modellbildung geeignet. Je
+nach Umfang und Form der Speicherung sind zusätzliche Hilfsmittel wie
+Skizzierutensilien oder Computerprogramme mit Darstellung erforderlich.
+
+Eine Modellbildung wird bewußt oder unbewußt durchgeführt, wenn
+
+  • ein erster Eindruck von der Geometrie gemacht wird,
+  • Zeichnungen gelesen werden,
+  • eine räumlich digitalisierte, per e-mail übermittelte Punktewolke am
+    Rechner betrachtet wird
+
+usw.
+
+Da die Modellbildung nicht an ein reales Modell gebunden ist, kann sie zeitlich
+und räumlich unabhängig erfolgen. D.h. es können die Vorteile der
+elektronischen Übermittlung und Kopierbarkeit genutzt werden, um die
+Informationen an unterschiedlichen Stellen unterschiedlichen Personen zur
+Verfügung zu stellen.
+
+Bsp. Dateien übers Internet
+
+Literatur
+
+ 1.
+ 2.
+

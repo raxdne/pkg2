@@ -1,0 +1,6 @@
+
+Abb. Kurven-Modell.gif
+
+Ein Kurven-Modell beschreibt wichtige Körperkanten durch einzelne Kurven
+(Drahtgittermodell, Loft-Kurven)
+

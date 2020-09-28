@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<!-- net specific instructions -->
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc">
+  <cxp:subst string="%DOCDIR%" argv="2" env="CXP_ROOT"/>
+  <cxp:subst string="%PETRINET%" argv="3" cgi="file"/>
+  <cxp:subst string="%FILTER%" cgi="removed"/>
+  <cxp:subst string="%START%" cgi="start"/>
+  <cxp:subst string="%TARGET%" cgi="target"/>
+  <cxp:subst string="%LMAX%" cgi="l_max" default="99"/>
+  <cxp:system chdir="%DOCDIR%"/>
+  <cxp:system message="%DOCDIR%%PETRINET%"/>
+  <!-- static hypertext files -->
+  <cxp:xhtml name="-">
+    <html>
+      <cxp:xhtml>
+        <cxp:xml name="%PETRINET%"/>
+        <cxp:xsl name="HtmlHeader.xsl">
+           <cxp:variable name="str_prefix" select="'/'"/>
+        </cxp:xsl>
+      </cxp:xhtml>
+      <body>
+        <div id="ui">
+          <cxp:xhtml>
+            <cxp:xsl name="HtmlMenu.xsl">
+				<cxp:variable name="str_prefix" select="'/'" />
+            </cxp:xsl>
+          </cxp:xhtml>
+          <div id="content">
+            <cxp:xhtml>
+              <cxp:xml name="%PETRINET%"/>
+              <cxp:xsl name="HtmlFormSearchPathMenue.xsl">
+				<cxp:variable name="str_prefix" select="'/'" />
+            </cxp:xsl>
+            </cxp:xhtml>
+          </div>
+        </div>
+        <!--  -->
+        <cxp:xhtml>
+          <cxp:xml name="%PETRINET%"/>
+          <cxp:xsl name="HtmlCopyrights.xsl"/>
+        </cxp:xhtml>
+      </body>
+    </html>
+  </cxp:xhtml>
+</cxp:make>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<cxp:make xmlns:cxp="http://www.tenbusch.info/cxproc">
+  <cxp:subst string="%TMPDIR%" env="TMPDIR" default="tmp"/>
+
+  <subst string="%PETRINET_IN%" argv="2"/>
+  <subst string="%ID%"     argv="3" default="pathnet"/>
+  <subst string="%START%"  argv="4" default=""/>
+  <subst string="%TARGET%" argv="5" default=""/>
+  <subst string="%LMAX%"   argv="6" default="6"/>
+
+  <subst string="%PETRINET_OUT%" to="%TMPDIR%/%ID%-table.xml"/>
+
+  <cxp:system mkdir="%TMPDIR%"/>
+
+      <cxp:xml name="-">
+	<cxp:pathtable start="%START%" target="%TARGET%" lmax="%LMAX%" type="xml">
+	    <cxp:xml name="%PETRINET_IN%"/>
+	</cxp:pathtable>
+      </cxp:xml>
+  <!-- 
+  <cxp:xml name="%PETRINET_OUT%" cache="yes">
+    <cxp:xml name="%PETRINET_IN%" cache="yes"/>
+    <cxp:xsl>
+      <cxp:xml name="%TMPDIR%/%ID%.xsl">
+	<cxp:pathtable start="%START%" target="%TARGET%" lmax="%LMAX%">
+	    <cxp:xml name="%PETRINET_IN%"/>
+	</cxp:pathtable>
+      </cxp:xml>
+    </cxp:xsl>
+  </cxp:xml>
+
+ -->
+</cxp:make>

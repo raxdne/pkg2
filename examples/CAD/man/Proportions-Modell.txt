@@ -1,0 +1,4 @@
+
+Ein Proportions-Modell enthält zusätzlich zur Gestalt (s. Anschauungs-Modell)
+alle Proportionen und geometrischen Details.
+

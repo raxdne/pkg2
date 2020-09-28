@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+PKG2 - ProzessKettenGenerator second implementation 
+Copyright (C) 1999-2020 by Alexander Tenbusch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+-->
+<pie:pie xmlns:pie="http://www.tenbusch.info/pie" xmlns:pkg="http://www.tenbusch.info/pkg" lang="de" class="petrinet">
+  <copyright>2005,2006,2011,2020 A. Tenbusch</copyright>
+  <author href="mailto:pkg@tenbusch.info">A. Tenbusch<translation lang="en">A. Tenbusch</translation></author>
+  <section id="workflow" version="0.6">
+    <h>Workflow von Dokumenten-Formaten<translation lang="en">Workflow von Dokumenten-Formaten</translation></h>
+    <section id="realitaet">
+      <h>Realität<translation lang="en">Reality</translation></h>
+      <pkg:stelle id="papiervorlage">
+        <h>beliebige Papiervorlage<translation lang="en">arbitrary paper template</translation></h>
+        <abstract>z.B Zeitungsartikel oder Buchkapitel<translation lang="en">Newspaper article or book chapter</translation></abstract>
+      </pkg:stelle>
+      <pkg:stelle id="arbeitsblatt">
+        <h>Arbeitsblatt<translation lang="en">Worksheet</translation></h>
+        <abstract>kopierfertige Vorlage<translation lang="en">kopierfertige Vorlage</translation></abstract>
+      </pkg:stelle>
+      <pkg:transition id="kopierer" rating="2">
+        <h>Kopierer<translation lang="en">Copy machine</translation></h>
+
+      </pkg:transition>
+      <pkg:relation from="papiervorlage" to="kopierer"/>
+      <pkg:relation from="arbeitsblatt" to="kopierer"/>
+      <pkg:relation from="kopierer" to="arbeitsblatt"/>
+      <pkg:relation from="kopierer" to="papiervorlage"/>
+    </section>
+    <section id="computer">
+      <h>Computer-Welt<translation lang="en">Virtuality (Computer)</translation></h>
+      <pkg:stelle id="html_datei" color="green">
+        <h>HTML-Datei<translation lang="en">HTML file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="pnm_datei">
+        <h>PNM-Datei<translation lang="en">PNM file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="png_datei" color="green" rating="3">
+        <h>PNG-Datei<translation lang="en">PNG file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="tiff_datei">
+        <h>TIFF-Datei<translation lang="en">TIFF file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="pdf_datei" color="green" rating="3">
+        <h>PDF-Datei<translation lang="en">PDF file</translation></h>
+
+        <pkg:req ref="color_cmyk" cat="E"/>
+      </pkg:stelle>
+      <pkg:stelle id="ps_datei">
+        <h>PS-oder EPS-Datei<translation lang="en">PS or EPS file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="doc_datei">
+        <h>DOC-Datei<translation lang="en">DOC file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="sxw_datei" color="green" rating="3">
+        <h>SXW-Datei<translation lang="en">SXW file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="scan_daten">
+        <h>Scan-Daten<translation lang="en">Scan-Daten</translation></h>
+
+        <pkg:req ref="resolution" cat="E"/>
+      </pkg:stelle>
+      <pkg:stelle id="txt2x_datei">
+        <h>txt2x-Datei<translation lang="en">txt2x file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="txt_datei">
+        <h>txt-Datei<translation lang="en">txt file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="drucker_daten">
+        <h>Drucker-Daten<translation lang="en">Drucker-Daten</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="tex_datei">
+        <h>LaTeX-oder TeX-Datei<translation lang="en">LaTeX-oder TeX file</translation></h>
+
+      </pkg:stelle>
+      <pkg:stelle id="alex_presentation">
+        <h>Alex Praesentation<translation lang="en">Alex Praesentation</translation></h>
+
+      </pkg:stelle>
+      <pkg:transition id="ghostscript">
+        <h>PostScript-Interpreter Ghostscript<translation lang="en">PostScript-Interpreter Ghostscript</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="editieren">
+        <h>Editor GNU Emacs<translation lang="en">Editor GNU Emacs</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="apt_pl">
+        <h>Skript apt.pl<translation lang="en">Skript apt.pl</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="pdflatex">
+        <h>pdflatex<translation lang="en">pdflatex</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="acrobat">
+        <h>Acrobat<translation lang="en">Acrobat</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="acrobat_reader">
+        <h>Acrobat Reader<translation lang="en">Acrobat Reader</translation></h>
+	<import name="man/en/acrobat_reader.md"/>
+      </pkg:transition>
+      <pkg:transition id="ocr">
+        <h>Texterkennung (OCR)<translation lang="en">Texterkennung (OCR)</translation></h>
+
+        <pkg:req ref="resolution" cat="E"/>
+      </pkg:transition>
+      <pkg:transition id="pnmtops_pipe_gs" valid="no">
+        <h>Skript arbeitsblaetter.sh<translation lang="en">Skript arbeitsblaetter.sh</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="pnmtops">
+        <h>pnmtops<translation lang="en">pnmtops</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="pnmtopng">
+        <h>pnmtopng<translation lang="en">pnmtopng</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="bildbearbeitung">
+        <h>GIMP<translation lang="en">GIMP</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="textverarbeitung">
+        <h>Open Office<translation lang="en">Open Office</translation></h>
+
+      </pkg:transition>
+      <pkg:transition id="web_browser">
+        <h>WWW-Browser (Firefox)<translation lang="en">WWW-Browser (Firefox)</translation></h>
+
+      </pkg:transition>
+      <pkg:requirement id="resolution" color="green">
+        <h>Auflösung<translation lang="en">Auflösung</translation></h>
+        <pkg:check>GIMP: Info<translation lang="en">GIMP: Info</translation></pkg:check>
+
+      </pkg:requirement>
+      <pkg:relation from="web_browser" to="ps_datei"/>
+      <pkg:relation from="pnmtops_pipe_gs" to="pdf_datei"/>
+      <pkg:relation from="pnm_datei" to="pnmtops_pipe_gs"/>
+      <pkg:relation from="pnm_datei" to="pnmtopng"/>
+      <pkg:relation from="pnmtopng" to="png_datei"/>
+      <pkg:relation from="png_datei" to="ocr" color="green"/>
+      <pkg:relation from="png_datei" to="bildbearbeitung"/>
+      <pkg:relation from="pnm_datei" to="bildbearbeitung"/>
+      <pkg:relation from="pnm_datei" to="pnmtops"/>
+      <pkg:relation from="pnmtops" to="ps_datei"/>
+      <pkg:relation from="scan_daten" to="bildbearbeitung" color="green">
+        <abstract>über File--Aquire--Xsane<translation lang="en">über File--Aquire--Xsane</translation></abstract>
+      </pkg:relation>
+      <pkg:relation from="bildbearbeitung" to="png_datei" color="green"/>
+      <pkg:relation from="scan_daten" to="ocr">
+        <abstract>mind. 300 DPI, Graustufen<translation lang="en">mind. 300 DPI, Graustufen</translation></abstract>
+      </pkg:relation>
+      <pkg:relation from="pdf_datei" to="ocr"/>
+      <pkg:relation from="acrobat" to="pdf_datei"/>
+      <pkg:relation from="pdf_datei" to="ghostscript"/>
+      <pkg:relation from="ps_datei" to="ghostscript"/>
+      <pkg:relation from="ghostscript" to="png_datei"/>
+      <pkg:relation from="ghostscript" to="pdf_datei"/>
+      <pkg:relation from="ghostscript" to="ps_datei"/>
+      <pkg:relation from="ghostscript" to="tiff_datei"/>
+      <pkg:relation from="ghostscript" to="drucker_daten"/>
+      <pkg:relation from="pdf_datei" to="acrobat_reader"/>
+      <pkg:relation from="ocr" to="doc_datei"/>
+      <pkg:relation from="ocr" to="pdf_datei"/>
+      <pkg:relation from="ocr" to="drucker_daten"/>
+      <pkg:relation from="doc_datei" to="textverarbeitung"/>
+      <pkg:relation from="html_datei" to="textverarbeitung"/>
+      <pkg:relation from="textverarbeitung" to="html_datei"/>
+      <pkg:relation from="editieren" to="html_datei"/>
+      <pkg:relation from="html_datei" to="editieren"/>
+      <pkg:relation from="ocr" to="txt_datei"/>
+      <pkg:relation from="editieren" to="txt_datei"/>
+      <pkg:relation from="editieren" to="txt2x_datei"/>
+      <pkg:relation from="txt2x_datei" to="apt_pl"/>
+      <pkg:relation from="txt_datei" to="editieren"/>
+      <pkg:relation from="tex_datei" to="pdflatex"/>
+      <pkg:relation from="pdf_datei" to="pdflatex"/>
+      <pkg:relation from="ps_datei" to="pdflatex"/>
+      <pkg:relation from="png_datei" to="pdflatex"/>
+      <pkg:relation from="pdflatex" to="pdf_datei"/>
+      <pkg:relation from="tex_datei" to="editieren"/>
+      <pkg:relation from="editieren" to="tex_datei"/>
+      <pkg:relation from="txt2x_datei" to="editieren"/>
+      <pkg:relation from="apt_pl" to="alex_presentation"/>
+      <pkg:relation from="apt_pl" to="html_datei"/>
+      <pkg:relation from="alex_presentation" to="web_browser"/>
+      <pkg:relation from="html_datei" to="web_browser"/>
+      <pkg:relation from="web_browser" to="drucker_daten"/>
+      <pkg:relation from="textverarbeitung" to="sxw_datei"/>
+      <pkg:relation from="png_datei" to="textverarbeitung" color="green">
+        <abstract>Insert--Graphics--From File<translation lang="en">Insert--Graphics--From File</translation></abstract>
+      </pkg:relation>
+      <pkg:relation from="sxw_datei" to="textverarbeitung" color="green"/>
+      <pkg:relation from="textverarbeitung" to="pdf_datei" color="green"/>
+      <pkg:relation from="textverarbeitung" to="drucker_daten"/>
+      <pkg:relation from="acrobat_reader" to="drucker_daten"/>
+    </section>
+    <pkg:transition id="scannen">
+      <h>Scanner<translation lang="en">Scanner</translation></h>
+
+    </pkg:transition>
+    <pkg:transition id="drucken">
+      <h>Drucker<translation lang="en">Drucker</translation></h>
+
+    </pkg:transition>
+    <pkg:relation from="drucker_daten" to="drucken"/>
+    <pkg:relation from="scannen" to="pnm_datei" color="red">
+      <abstract>Probleme mit contrast,thrashold<translation lang="en">Probleme mit contrast,thrashold</translation></abstract>
+    </pkg:relation>
+    <pkg:relation from="scannen" to="scan_daten" style="bold"/>
+    <pkg:relation from="drucken" to="papiervorlage"/>
+    <pkg:relation from="drucken" to="arbeitsblatt"/>
+    <pkg:relation from="papiervorlage" to="scannen"/>
+    <pkg:relation from="arbeitsblatt" to="scannen"/>
+    <section class="requirements">
+      <h>Typische Anforderungen<translation lang="en">Typische Anforderungen</translation></h>
+        <section>
+          <h>Druck<translation lang="en">Printing</translation></h>
+          <pkg:requirement id="color_cmyk" basics="yes">
+            <h>CMYK Farben<translation lang="en">CMYK Colors</translation></h>
+
+          </pkg:requirement>
+          <pkg:requirement id="color_rgb" basics="yes">
+            <h>RGB Farbschema<translation lang="en">RGB Colors</translation></h>
+            <abstract>Das Farbschema "RGB" ist zu verwenden.<translation lang="en">RGB Colors are mandatory.</translation></abstract>
+          </pkg:requirement>
+          <pkg:requirement id="resolution" basics="yes">
+            <h>Mindestauflösung<translation lang="en">Minimum Resolution</translation></h>
+
+          </pkg:requirement>
+        </section>
+    </section>
+  </section>
+</pie:pie>

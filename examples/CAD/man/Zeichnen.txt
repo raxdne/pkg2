@@ -1,0 +1,5 @@
+
+Das Zeichnen dient dem manuellen Erstellen von Skizzen und Zeichnungen. Dies
+stellt die älteste Form der technischen Dokumentation dar.
+
+Abb. Zeichnen.gif

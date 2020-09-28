@@ -1,0 +1,12 @@
+
+Abb. ZweiD-CAD.gif
+
+Die einfachste Form ist die Übertragung der Skizzen in ein 2D-CAD-System. Die
+Vorgehensweise ist der des Skizzierens sehr ähnlich und damit auch einfach zu
+erlernen.
+
+Die Vorstellungen vom Modell werden mit dem 2D-CAD »gezeichnet«.
+
+Die Daten können geplottet oder über ein Standardformat (z.B. DXF) an andere
+Prozesse übergeben werden.
+

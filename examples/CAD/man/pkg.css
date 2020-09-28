@@ -1,0 +1,33 @@
+/* DATEI: pkg.css */
+
+/* body { background-color:#eeeeee; font-family:courier; font-size:24px; } */
+
+body,table { background-color:#eeeef6; font-family:lucida,Arial; font-size:12px; font-weight:medium; }
+
+p,center,ol,ul,li,td,th,i,b { }
+
+p { margin-bottom:0px; }
+
+/* Zelle in der Navigationsleiste */
+td.nav { margin-bottom:0px; margin-top:0px; font-size:16px; }
+td.fun { margin-bottom:0px; text-align:center; background-color:#9b9b9b; color:#eeeeee; }
+td.hervor { margin-bottom:0px; text-align:center; background-color:#4b4b4b; color:#eeeeee; }
+
+/* ul */
+				/* ul { list-style-type:disk; } */
+/* ul { list-style-image:url(bullet.png); font-size:24px; } */
+
+/* ol { list-style-type:roman; font-size:24px; } */
+
+/* li { margin-top:30px; } */
+
+a:link { color:#203883; text-decoration:none; }
+
+/* a:visited { color:#772200; text-decoration:none; } */
+a:visited { color:#203883; text-decoration:none; }
+
+
+
+
+
+

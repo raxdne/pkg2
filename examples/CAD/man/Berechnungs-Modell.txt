@@ -1,0 +1,12 @@
+
+Abb. process.gif
+
+Ein Berechnungs-Modell stellt ein u.U. vereinfachtes und mit zusätzlichen
+errechneten Informationen (z.B. Spannungen, Verformungen) versehenes
+Geometriemodell dar.
+
+Es kann zwar den Ausgangspunkt für eine Modellierung bilden (z.B.
+Strömungsformen), eine nahtlose, automatische Überführung der
+Berechnungsergebnisse ist bisher meist nur mit komplexen integrierten Systemen
+wie z.B. I-DEAS (von SDRC, Inc) oder Pro/Engineer (von PTC) möglich.
+

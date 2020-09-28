@@ -1,0 +1,7 @@
+
+* Beschreibung
+
+Dieser Prozeß umfaßt alle numerischen Methoden, mit denen die Eigenschaften
+einer Geometrie bestimmt werden können. Zu diesen Methoden gehören
+beispielsweise die Finite-Elemente-Methode (FEM), die ,,boundary element method
+`` (BEM) und ,,Computational Fluid Dynamics`` (CFD).

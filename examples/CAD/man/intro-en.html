@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+  <head>
+<link rel="stylesheet" media="screen, print" type="text/css" href="txt2x.css">
+    <title></title>
+  </head>
+  <body bgcolor=#EEEEEE>
+
+
+
+<h1>PKG - A process chain generator</h1>
+
+<p>Customers demand high-quality state-of-the-art consumer products today. Individual characteristics in ergonomics and design are possible attributes of these kind of products. Competitors are coerced to realize new product ideas very fast. This leads to short product cycles with an as short as possible developmental period.</p>
+
+<p>The distinctive features design, ergonomics and fluid dynamics lead to an important partial model &raquo;geometry&laquo; inside the computer-internal product model, including complex shapes and free-form surfaces. The creation, modification, conversion and evaluation of complex 3D geometries are important recurrent tasks during product development.</p>
+
+<p>Several powerful technologies for capturing, processing and realizing free form surfaces (e.g. 3D-digitising, surface reconstruction, rapid prototyping) are used. There are, however, some coherent problems. Because the equipment and the know how are distributed on several departments or external service bureaus the new technologies and the included potentialities are often unknown to possible users. On the other hand some technologies require other technologies, which leads to process chains (e.g. RP requires normally CAD modelling). As a result of these two phenomenons potentialities remain unused or the organisation of suitable process chains takes too long and the results of the process chains are often not up to date.</p>
+
+<p>There are some approaches to description of process chains [1,2,3] but there is no quick-and-easy to use decision help yet for search for and selection of a suitable process chain. The aim of the described project is a WWW based tool for specification of the given task, search for a group of proper process chains and evaluation of these groups. Technical aspects (CAD interfaces, file formats, digitising devices) of process chains during the product development are emphasis of this approach. No special know how about technologies like 3D Digitising or Rapid Prototyping should be needed for application. The possibilities of the WWW support wide access and verification of the program concept.</p>
+
+<p>The basic idea is, that the product development is a &raquo;model processing&laquo;. For example, the origin is an idea (&raquo;mental model&laquo;) which is later transformed into abstract models (e.g. CAD, FEM) and further into real prototypes. The product is the final prototype. All of these real, virtual and ideal models are different kinds of representation of the geometric data.</p>
+
+<p>From a functional view the models are input and output of functions. Considering these three kinds of models there are 9 functions. For example, the transformation of virtual models into real models named &raquo;Realization&laquo; can be made by using CNC or RP as possible solutions. CAD modelling is a transformation of an ideal model into a virtual one.</p>
+
+<p><center><a name="modell-bus"><img src="modell-bus." vspace=20></a><br><b>Abb. 1:</b> Modellbus</center></p>
+
+<p>A formal description for the connections between models and processes was drafted using Petri nets. 19 processes, 18 models and 97 relations have been respected by now. Based on this the WWW tool named &raquo;ProzessKettenGenerator&laquo; (PKG) for selecting and evaluating was developed.</p>
+
+<p>The program written in C, PERL and LISP provides 4 interactive steps</p>
+
+<ol>
+<li>Definition of the task</li>
+
+<li>Clarification of the task</li>
+
+<li>Evaluation of the remaining chains</li>
+
+<li>Generation of the Documentation</li>
+
+</ol>
+<p>These steps are derived from the systematic engineering design process (design methodology). A concept of the required process chain is the result of an interactive program run.</p>
+
+<p>Main features of the program are the world wide access with any web browser, the open architecture, the detailed descriptions of models, processes, relations and evaluation rules. A broad discussion about conception, content and improvements of the program is intended.</p>
+
+<p>[1] Spur, G.; Krause, F.-L.: Das virtuelle Produkt: Management der  CAD-Technik. Hanser, 1997</p>
+
+<p>[2] Dubois, P.; Aoussat, A.: A Method to Formalise the Rapid  Prototyping Process. In: the 12th International Conference on  Engineering Design (ICED99) Bd. 2. München, August 1999,  S. 637-642</p>
+
+<p>[3] Kaschka, U.: Methodik zur Entscheidungsunterstützung bei der  Auswahl und Bewertung von konventionellen und Rapid  Tooling-Prozessketten, TU Chemnitz, Dissertation, 1999</p>
+
+
+  <a name="ende"></a>
+</body>
+</html>
+
+

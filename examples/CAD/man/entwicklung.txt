@@ -1,0 +1,25 @@
+Für die Entwicklung dieses Programms wurde die freie Software
+
+  • GNU Emacs 20.x (LISP-IDE und -Interpreter, HTML- und Text-Editor)
+
+  • GNU C-Compiler 2.x
+
+  • GNU Debugger
+
+  • Perl 5.x (Interpreter CGI-Scripte)
+
+  • DDD 3.x (Grafische Oberfläche für GNU- und Perl-Debugger)
+
+  • Apache 1.3.x (HTTP-Server)
+
+unter Debian GNU/Linux 2.x und SuSE Linux 6.2, 7.2 als Betriebssystem
+verwendet.
+
+Als Dokumentationen wurden u.a. die GNU Emacs Dokumentation (Emacs-lisp-intro,
+Elisp), "Programmieren mit Perl" (O'Reilly Verlag), "ANSI common lisp" (
+Prentice Hall Verlag) und SELFHTML verwendet
+
+Die Hardware für Programmentwicklung und Server reichte vom Laptop (IBM
+Thinkpad i486-75) über den PC (i586MMX-233) bis zu Workstations (Sun UltraSPARC
+IIi, HP Parisc C240).
+

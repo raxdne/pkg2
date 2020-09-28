@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?><rng:grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:tns="http://www.tenbusch.info/pkg" ns="http://www.tenbusch.info/pkg" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<rng:define name="copyright" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="author" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="section" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="h" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="abstract" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="import" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="h" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="p" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="import" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="abstract" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="h" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="translation" combine="interleave">
+<rng:empty/>
+</rng:define>
+<rng:define name="import" combine="interleave">
+<rng:empty/>
+</rng:define>
+  
+  <rng:start combine="choice">
+<rng:ref name="pie"/>
+</rng:start>
+<rng:define name="pie" combine="interleave">
+<rng:element name="pie">
+    
+      
+        <rng:ref name="copyright"/>
+        <rng:ref name="author"/>
+        <rng:ref name="section"/>
+      
+      <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+      <rng:attribute name="class">
+<rng:data type="string"/>
+</rng:attribute>
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="copyright"/>
+</rng:start>
+<rng:define name="copyright" combine="interleave">
+<rng:element name="copyright">
+    
+      
+        <rng:element name="translation">
+          
+            
+              
+                <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+              
+            
+          
+        </rng:element>
+      
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="author"/>
+</rng:start>
+<rng:define name="author" combine="interleave">
+<rng:element name="author">
+    
+      
+        <rng:element name="translation">
+          
+            
+              
+                <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+              
+            
+          
+        </rng:element>
+      
+      <rng:attribute name="href">
+<rng:data type="string"/>
+</rng:attribute>
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="section"/>
+</rng:start>
+<rng:define name="section" combine="interleave">
+<rng:element name="section">
+    
+      
+        <rng:oneOrMore>
+<rng:choice>
+          <rng:element name="h">
+            
+              
+                <rng:element name="translation">
+                  
+                    
+                      
+                        <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+                      
+                    
+                  
+                </rng:element>
+              
+            
+          </rng:element>
+          <rng:element name="copyright">
+<rng:data type="string"/>
+</rng:element>
+          <rng:element name="author">
+            
+              
+                <rng:element name="translation">
+                  
+                    
+                      
+                        <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+                      
+                    
+                  
+                </rng:element>
+              
+              <rng:attribute name="href">
+<rng:data type="string"/>
+</rng:attribute>
+            
+          </rng:element>
+          <rng:oneOrMore>
+<rng:element name="section">
+            
+              
+                <rng:element name="h">
+                  
+                    
+                      <rng:element name="translation">
+                        
+                          
+                            
+                              <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+                            
+                          
+                        
+                      </rng:element>
+                    
+                  
+                </rng:element>
+                <rng:optional>
+<rng:element name="section">
+                  
+                    
+                      <rng:element name="h">
+                        
+                          
+                            <rng:element name="translation">
+                              
+                                
+                                  
+                                    <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+                                  
+                                
+                              
+                            </rng:element>
+                          
+                        
+                      </rng:element>
+                      <rng:oneOrMore>
+<rng:element name="section">
+                        
+                          
+                            <rng:element name="h">
+                              
+                                
+                                  <rng:element name="translation">
+                                    
+                                      
+                                        
+                                          <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+                                        
+                                      
+                                    
+                                  </rng:element>
+                                
+                              
+                            </rng:element>
+                            <rng:zeroOrMore>
+<rng:data type="requirement"/>
+</rng:zeroOrMore>
+                          
+                        
+                      </rng:element>
+</rng:oneOrMore>
+                    
+                  
+                </rng:element>
+</rng:optional>
+                <rng:zeroOrMore>
+<rng:data type="stelle"/>
+</rng:zeroOrMore>
+                <rng:zeroOrMore>
+<rng:data type="transition"/>
+</rng:zeroOrMore>
+                <rng:optional>
+<rng:data type="requirement"/>
+</rng:optional>
+                <rng:zeroOrMore>
+<rng:data type="relation"/>
+</rng:zeroOrMore>
+              
+              <rng:optional>
+<rng:attribute name="id">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+              <rng:optional>
+<rng:attribute name="class">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+            
+          </rng:element>
+</rng:oneOrMore>
+          <rng:oneOrMore>
+<rng:data type="transition"/>
+</rng:oneOrMore>
+          <rng:oneOrMore>
+<rng:data type="relation"/>
+</rng:oneOrMore>
+        </rng:choice>
+</rng:oneOrMore>
+      
+      <rng:attribute name="id">
+<rng:data type="string"/>
+</rng:attribute>
+      <rng:attribute name="version">
+<rng:data type="decimal"/>
+</rng:attribute>
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="h"/>
+</rng:start>
+<rng:define name="h" combine="interleave">
+<rng:element name="h">
+    
+      
+        <rng:element name="translation">
+          
+            
+              
+                <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+              
+            
+          
+        </rng:element>
+      
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="abstract"/>
+</rng:start>
+<rng:define name="abstract" combine="interleave">
+<rng:element name="abstract">
+    
+      
+        <rng:element name="translation">
+          
+            
+              
+                <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+              
+            
+          
+        </rng:element>
+      
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="import"/>
+</rng:start>
+<rng:define name="import" combine="interleave">
+<rng:element name="import">
+    
+      <rng:attribute name="name">
+<rng:data type="string"/>
+</rng:attribute>
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="p"/>
+</rng:start>
+<rng:define name="p" combine="interleave">
+<rng:element name="p">
+    
+      
+        <rng:element name="link">
+          
+            
+              <rng:element name="translation">
+                
+                  
+                    
+                      <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+                    
+                  
+                
+              </rng:element>
+            
+            <rng:attribute name="href">
+<rng:data type="string"/>
+</rng:attribute>
+          
+        </rng:element>
+      
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="translation"/>
+</rng:start>
+<rng:define name="translation" combine="interleave">
+<rng:element name="translation">
+    
+      
+        
+          <rng:attribute name="lang">
+<rng:data type="string"/>
+</rng:attribute>
+        
+      
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="stelle"/>
+</rng:start>
+<rng:define name="stelle" combine="interleave">
+<rng:element name="stelle">
+    
+      
+        <rng:ref name="h"/>
+        <rng:optional>
+<rng:ref name="abstract"/>
+</rng:optional>
+        <rng:ref name="import"/>
+      
+      <rng:attribute name="id">
+<rng:data type="string"/>
+</rng:attribute>
+      <rng:optional>
+<rng:attribute name="color">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+      <rng:optional>
+<rng:attribute name="rating">
+<rng:data type="unsignedByte"/>
+</rng:attribute>
+</rng:optional>
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="transition"/>
+</rng:start>
+<rng:define name="transition" combine="interleave">
+<rng:element name="transition">
+    
+      
+        <rng:ref name="h"/>
+        <rng:optional>
+<rng:ref name="p"/>
+</rng:optional>
+        <rng:ref name="import"/>
+      
+      <rng:attribute name="id">
+<rng:data type="string"/>
+</rng:attribute>
+      <rng:optional>
+<rng:attribute name="rating">
+<rng:data type="unsignedByte"/>
+</rng:attribute>
+</rng:optional>
+      <rng:optional>
+<rng:attribute name="valid">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="relation"/>
+</rng:start>
+<rng:define name="relation" combine="interleave">
+<rng:element name="relation">
+    
+      
+        <rng:ref name="abstract"/>
+        <rng:optional>
+<rng:element name="req">
+          
+            <rng:attribute name="ref">
+<rng:data type="string"/>
+</rng:attribute>
+            <rng:attribute name="cat">
+<rng:data type="string"/>
+</rng:attribute>
+          
+        </rng:element>
+</rng:optional>
+      
+      <rng:attribute name="from">
+<rng:data type="string"/>
+</rng:attribute>
+      <rng:attribute name="to">
+<rng:data type="string"/>
+</rng:attribute>
+      <rng:optional>
+<rng:attribute name="color">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+      <rng:optional>
+<rng:attribute name="style">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+    
+  </rng:element>
+</rng:define>
+  <rng:start combine="choice">
+<rng:ref name="requirement"/>
+</rng:start>
+<rng:define name="requirement" combine="interleave">
+<rng:element name="requirement">
+    
+      
+        <rng:ref name="h"/>
+        <rng:optional>
+<rng:element name="check">
+          
+            
+              <rng:ref name="translation"/>
+            
+          
+        </rng:element>
+</rng:optional>
+        <rng:ref name="import"/>
+      
+      <rng:attribute name="id">
+<rng:data type="string"/>
+</rng:attribute>
+      <rng:optional>
+<rng:attribute name="color">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+      <rng:optional>
+<rng:attribute name="basics">
+<rng:data type="string"/>
+</rng:attribute>
+</rng:optional>
+    
+  </rng:element>
+</rng:define>
+</rng:grammar>
