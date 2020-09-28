@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pie:pie xmlns:pie="http://www.tenbusch.info/pie" xmlns:pkg="http://www.tenbusch.info/pkg" lang="de" class="petrinet">
-  <author href="raxdne@web.de">A. Tenbusch</author>
+  <author href="mailto:raxdne@web.de">A. Tenbusch</author>
   <copyright>(C) 1999-2020 A. Tenbusch</copyright>
   <section id="pkg" version="1.1">
     <h>CAD-Prozesse<translation lang="en">CAD processes</translation></h>
