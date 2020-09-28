@@ -21,8 +21,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 -->
 <pie:pie xmlns:pie="http://www.tenbusch.info/pie" xmlns:pkg="http://www.tenbusch.info/pkg" lang="de" class="petrinet">
   <copyright>2005,2006,2011,2020 A. Tenbusch</copyright>
-  <author href="mailto:pkg@tenbusch.info">A. Tenbusch<translation lang="en">A. Tenbusch</translation></author>
-  <section id="workflow" version="0.6">
+  <author href="mailto:raxdne@web.de">A. Tenbusch<translation lang="en">A. Tenbusch</translation></author>
+  <section id="workflow" version="0.7">
     <h>Workflow von Dokumenten-Formaten<translation lang="en">Workflow von Dokumenten-Formaten</translation></h>
     <section id="realitaet">
       <h>Realität<translation lang="en">Reality</translation></h>

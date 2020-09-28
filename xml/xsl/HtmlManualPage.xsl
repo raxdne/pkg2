@@ -82,7 +82,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     </xsl:if>
     <xsl:if test="self::pkg:requirement and child::pkg:check">
       <tr>
-        <td>Prüfungen
+        <td>PrÃ¼fungen
         <ul><xsl:apply-templates select="pkg:check"/></ul>
       </td>
       </tr>
@@ -95,7 +95,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 <!-- only if parent is a subnet -->
         <xsl:text> (</xsl:text>
         <xsl:choose>
-          <xsl:when test="self::stelle or self::transition or self::section">
+          <xsl:when test="self::pkg:stelle or self::pkg:transition or self::section">
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="concat(parent::section/@id,'.html')"/>

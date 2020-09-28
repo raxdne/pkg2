@@ -97,7 +97,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     <xsl:value-of select="concat(name(),' @to is empty',$newline)"/>
   </xsl:if>
 
-  <!-- knots must be stelle/transition or transition/stelle -->
+  <!-- knots must be pkg:stelle/pkg:transition or pkg:transition/pkg:stelle -->
   <xsl:if test="not((//pkg:stelle[@id = $id_from] and //pkg:transition[@id = $id_to]) or (//pkg:transition[@id = $id_from] and //pkg:stelle[@id = $id_to]))">
     <xsl:value-of select="concat(name(),' ',@from,' -> ',@to,': Knots not suitable',$newline)"/>
   </xsl:if>

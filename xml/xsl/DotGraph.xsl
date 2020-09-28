@@ -114,7 +114,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     <xsl:if test="$flag_edge">
       <xsl:text>// Relations</xsl:text>
       <xsl:value-of select="$newline"/>
-      <!--  <xsl:apply-templates select="//relation[@to = $id_element or @from = $id_element]"/> -->
+      <!--  <xsl:apply-templates select="//pkg:relation[@to = $id_element or @from = $id_element]"/> -->
       <xsl:for-each select="//pkg:relation[@to = $id_element]">
         <xsl:call-template name="KNOT">
           <xsl:with-param name="id_knot">
@@ -142,7 +142,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
         <xsl:with-param name="StringToTransform" select="h"/>
       </xsl:call-template>
       <xsl:text>", </xsl:text>
-      <!-- detect transition -->
+      <!-- detect pkg:transition -->
       <xsl:if test="self::pkg:transition">
         <xsl:text>shape="box", </xsl:text>
       </xsl:if>
