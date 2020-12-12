@@ -68,63 +68,59 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     <cxp:system message="Copying image '%N%' to '%TMPDIR%/'"/>
     <cxp:copy from="%N%" to="%TMPDIR%/"/>
   </cxp:each>
-  <!-- cache main xml -->
-	<cxp:xml cacheas="#main#xml#">
-		<cxp:xml name="%INPUT%" />
-		<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pkg="http://www.tenbusch.info/pkg" xmlns:pie="http://www.tenbusch.info/pie" version="1.0">
-			<xsl:output method="xml"/>  
-			<xsl:variable name="id_lang" select="'%LANG%'"/>
-			<xsl:template match="@*|node()">
-				<xsl:choose>
-					<!-- in valids -->
-					<xsl:when test="self::pkg:*[(name() = 'pkg:stelle' or name() = 'pkg:transition') and not(child::import) and not(child::abstract)]">
-						<xsl:element name="{name()}">
-							<xsl:copy-of select="@*"/>
-							<xsl:apply-templates select="*"/> 
-							<xsl:element name="import">
-								<xsl:attribute name="name">
-									<xsl:value-of select="concat('man/',$id_lang,'/',@id,'.txt')"/>
-								</xsl:attribute>
-							</xsl:element >
-						</xsl:element >
-					</xsl:when>
-					<xsl:when test="child::translation[@lang=$id_lang]">
-						<xsl:element name="{name(.)}">
-							<xsl:copy-of select="@*"/> 
-							<xsl:apply-templates select="child::translation"/> 
-						</xsl:element>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:copy>
-							<xsl:apply-templates select="@*|node()"/> 
-						</xsl:copy>
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:template>     
-			<xsl:template match="translation">
-				<xsl:choose>
-					<xsl:when test="@lang=$id_lang">
-						<xsl:apply-templates/>
-					</xsl:when>
-					<xsl:otherwise>
-						<!-- ignore other languages -->
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:template>
-		</xsl:stylesheet>
-	</cxp:xml>
   <!-- main xml -->
   <cxp:xml name="%TMPDIR%/main.xml" cache="yes">
     <cxp:xml>
       <cxp:xml>
         <pie import="yes" locator="no" tags="no" todo="no" context="%INPUTDIR%">
-	  <import name="#main#xml#"/>
+	  <import name="%INPUT%"/>
 	</pie>
       </cxp:xml>
       <cxp:xsl name="XmlCleanUpRelations.xsl"/>
       <cxp:xsl name="XmlCleanUp.xsl"/>
       <cxp:xsl name="XmlCleanUpRelations.xsl"/>
       <cxp:xsl name="XmlCleanUp.xsl"/>
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pkg="http://www.tenbusch.info/pkg" xmlns:pie="http://www.tenbusch.info/pie" version="1.0">
+      <xsl:output method="xml"/>  
+      <xsl:variable name="id_lang" select="'%LANG%'"/>
+      <xsl:template match="@*|node()">
+	<xsl:choose>
+	  <xsl:when test="self::*[(local-name() = 'stelle' or local-name() = 'transition') and not(child::import) and not(child::abstract)]">
+	    <xsl:element name="{name()}">
+	      <xsl:copy-of select="@*"/>
+	      <xsl:apply-templates select="*"/>
+	      <!-- insert a import child -->
+	      <xsl:element name="import">
+		<xsl:attribute name="name">
+		  <xsl:value-of select="concat('man/',$id_lang,'/',@id,'.txt')"/>
+		</xsl:attribute>
+	      </xsl:element >
+	    </xsl:element >
+	  </xsl:when>
+	  <xsl:when test="child::translation[@lang=$id_lang]">
+	    <xsl:element name="{name()}">
+	      <xsl:copy-of select="@*"/> 
+	      <xsl:apply-templates select="child::translation[@lang=$id_lang]"/> 
+	    </xsl:element>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:copy>
+	      <xsl:apply-templates select="@*|node()"/> 
+	    </xsl:copy>
+	  </xsl:otherwise>
+	</xsl:choose>
+      </xsl:template>     
+      <xsl:template match="translation">
+	<xsl:choose>
+	  <xsl:when test="@lang=$id_lang">
+	    <xsl:apply-templates/>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <!-- ignore other languages -->
+	  </xsl:otherwise>
+	</xsl:choose>
+      </xsl:template>
+    </xsl:stylesheet>
     </cxp:xml>
   </cxp:xml>
   <!-- check report for main xml -->
@@ -133,13 +129,13 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     <cxp:xsl name="NetCheck.xsl"/>
   </cxp:plain>
   <!-- PIE -->
-  <cxp:xml name="%TMPDIR%/main.pie">
+  <cxp:xml name="%TMPDIR%/main_all.pie">
     <cxp:xml name="%TMPDIR%/main.xml"/>
     <cxp:xsl name="pkg2pie.xsl"/>
   </cxp:xml>
   <!-- static hypertext files -->
-  <cxp:xhtml name="%TMPDIR%/main.html">
-    <cxp:xml name="%TMPDIR%/main.pie"/>
+  <cxp:xhtml name="%TMPDIR%/main_all.html">
+    <cxp:xml name="%TMPDIR%/main_all.pie"/>
     <cxp:xsl name="pie2html.xsl">
       <cxp:variable name="flag_toc" select="true()"/>
       <cxp:variable name="flag_tags" select="false()"/>
@@ -148,12 +144,12 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     </cxp:xsl>
   </cxp:xhtml>
   <!-- Mindmap -->
-  <cxp:xml name="%TMPDIR%/main.mm">
-    <cxp:xml name="%TMPDIR%/main.pie"/>
+  <cxp:xml name="%TMPDIR%/main_all.mm">
+    <cxp:xml name="%TMPDIR%/main_all.pie"/>
     <cxp:xsl name="pie2mm.xsl"/>
   </cxp:xml>
-  <cxp:xml name="%TMPDIR%/main.xmmap">
-    <cxp:xml name="%TMPDIR%/main.mm"/>
+  <cxp:xml name="%TMPDIR%/main_all.xmmap">
+    <cxp:xml name="%TMPDIR%/main_all.mm"/>
     <cxp:xsl name="mm2xmmap.xsl"/>
   </cxp:xml>
 </cxp:make>

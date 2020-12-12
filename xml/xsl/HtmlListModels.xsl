@@ -46,11 +46,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     </th>
   </tr>
   <xsl:call-template name="ELEMENT">
-    <xsl:with-param name="id_knot" select="*[name() = $name_tag]"/>
+    <xsl:with-param name="nodeset_knot" select="*[local-name() = $name_tag]"/>
   </xsl:call-template>
-  <xsl:apply-templates select="block|section[@id]"/>
+  <xsl:apply-templates select="block|section"/>
 </xsl:template>
-
 
 <xsl:template match="section[@id]">
   <xsl:if test="not($name_tag='section')">
@@ -66,17 +65,16 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
     </tr>
   </xsl:if>
   <xsl:call-template name="ELEMENT">
-    <xsl:with-param name="id_knot" select="*[name() = $name_tag and @id]"/>
+    <xsl:with-param name="nodeset_knot" select="*[local-name() = $name_tag and @id]"/>
   </xsl:call-template>
-  <xsl:apply-templates select="block|section[@id]"/>
+  <xsl:apply-templates select="block|section"/>
 </xsl:template>
 
 
 <xsl:template name="ELEMENT">
-  <xsl:param name="id_knot"/>
-    <xsl:if test="not(@id='')">
-    </xsl:if>
-  <xsl:for-each select="$id_knot">
+  <xsl:param name="nodeset_knot"/>
+  <xsl:for-each select="$nodeset_knot">
+  <xsl:comment><xsl:value-of select="@id"/></xsl:comment>
   <tr>
     <td>
       <xsl:value-of select="position()"/>

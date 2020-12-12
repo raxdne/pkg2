@@ -93,7 +93,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
             <cxp:xhtml>
               <cxp:xml name="%TMPDIR%/main.xml"/>
               <cxp:xsl name="HtmlListModels.xsl">
-                <cxp:variable name="name_tag" select="'pkg:stelle'"/>
+                <cxp:variable name="name_tag" select="'stelle'"/>
                 <cxp:variable name="name_str" select="'Modelle'"/>
               </cxp:xsl>
             </cxp:xhtml>
@@ -123,7 +123,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
             <cxp:xhtml>
               <cxp:xml name="%TMPDIR%/main.xml"/>
               <cxp:xsl name="HtmlListModels.xsl">
-                <cxp:variable name="name_tag" select="'pkg:transition'"/>
+                <cxp:variable name="name_tag" select="'transition'"/>
                 <cxp:variable name="name_str" select="'Prozesse'"/>
               </cxp:xsl>
             </cxp:xhtml>
